@@ -645,65 +645,139 @@
             <node concept="3cpWs8" id="3xJFGTMtP0i" role="3cqZAp">
               <node concept="3cpWsn" id="3xJFGTMtP0l" role="3cpWs9">
                 <property role="TrG5h" value="id" />
+                <property role="3TUv4t" value="true" />
                 <node concept="17QB3L" id="3xJFGTMtP0g" role="1tU5fm" />
-                <node concept="2YIFZM" id="3WlLGfGGK$F" role="33vP2m">
-                  <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                  <ref role="37wK5l" to="wyt6:~String.format(java.lang.String,java.lang.Object...)" resolve="format" />
-                  <node concept="Xl_RD" id="3WlLGfGGK$G" role="37wK5m">
-                    <property role="Xl_RC" value="{\&quot;moduleId\&quot;=\&quot;%s\&quot;, \&quot;modelId\&quot;=\&quot;%s\&quot;, \&quot;nodeId\&quot;=\&quot;%s\&quot;" />
-                  </node>
-                  <node concept="2OqwBi" id="3WlLGfGGK$H" role="37wK5m">
-                    <node concept="2OqwBi" id="3WlLGfGGK$I" role="2Oq$k0">
-                      <node concept="2OqwBi" id="3WlLGfGGK$J" role="2Oq$k0">
-                        <node concept="2OqwBi" id="3WlLGfGGK$K" role="2Oq$k0">
-                          <node concept="37vLTw" id="3WlLGfGGK$L" role="2Oq$k0">
-                            <ref role="3cqZAo" node="3WlLGfGGDd3" resolve="node" />
-                          </node>
-                          <node concept="liA8E" id="3WlLGfGGK$M" role="2OqNvi">
-                            <ref role="37wK5l" to="w1kc:~SNode.getModel()" resolve="getModel" />
-                          </node>
-                        </node>
-                        <node concept="liA8E" id="3WlLGfGGK$N" role="2OqNvi">
-                          <ref role="37wK5l" to="mhbf:~SModel.getModule()" resolve="getModule" />
-                        </node>
-                      </node>
-                      <node concept="liA8E" id="3WlLGfGGK$O" role="2OqNvi">
-                        <ref role="37wK5l" to="lui2:~SModule.getModuleId()" resolve="getModuleId" />
-                      </node>
+              </node>
+            </node>
+            <node concept="3clFbJ" id="5qJ$Po8lGZ_" role="3cqZAp">
+              <node concept="3clFbS" id="5qJ$Po8lGZB" role="3clFbx">
+                <node concept="2xdQw9" id="5qJ$Po8lTwa" role="3cqZAp">
+                  <node concept="3cpWs3" id="5qJ$Po8oP2G" role="9lYJi">
+                    <node concept="Xl_RD" id="5qJ$Po8oQ8h" role="3uHU7w">
+                      <property role="Xl_RC" value=", use only nodeId for the hint-group" />
                     </node>
-                    <node concept="liA8E" id="3WlLGfGGK$P" role="2OqNvi">
-                      <ref role="37wK5l" to="wyt6:~Object.toString()" resolve="toString" />
-                    </node>
-                  </node>
-                  <node concept="2OqwBi" id="3WlLGfGGK$Q" role="37wK5m">
-                    <node concept="2OqwBi" id="3WlLGfGGK$R" role="2Oq$k0">
-                      <node concept="2OqwBi" id="3WlLGfGGK$S" role="2Oq$k0">
-                        <node concept="37vLTw" id="3WlLGfGGK$T" role="2Oq$k0">
+                    <node concept="3cpWs3" id="5qJ$Po8lZ_r" role="3uHU7B">
+                      <node concept="Xl_RD" id="5qJ$Po8lTwc" role="3uHU7B">
+                        <property role="Xl_RC" value="Found node without a model: " />
+                      </node>
+                      <node concept="2OqwBi" id="5qJ$Po8nnpr" role="3uHU7w">
+                        <node concept="37vLTw" id="5qJ$Po8m2qn" role="2Oq$k0">
                           <ref role="3cqZAo" node="3WlLGfGGDd3" resolve="node" />
                         </node>
-                        <node concept="liA8E" id="3WlLGfGGK$U" role="2OqNvi">
-                          <ref role="37wK5l" to="w1kc:~SNode.getModel()" resolve="getModel" />
+                        <node concept="liA8E" id="5qJ$Po8oh8J" role="2OqNvi">
+                          <ref role="37wK5l" to="w1kc:~SNode.getConcept()" resolve="getConcept" />
                         </node>
                       </node>
-                      <node concept="liA8E" id="3WlLGfGGK$V" role="2OqNvi">
-                        <ref role="37wK5l" to="mhbf:~SModel.getModelId()" resolve="getModelId" />
-                      </node>
-                    </node>
-                    <node concept="liA8E" id="3WlLGfGGK$W" role="2OqNvi">
-                      <ref role="37wK5l" to="wyt6:~Object.toString()" resolve="toString" />
                     </node>
                   </node>
-                  <node concept="2OqwBi" id="3WlLGfGGK$X" role="37wK5m">
-                    <node concept="2OqwBi" id="3WlLGfGGK$Y" role="2Oq$k0">
-                      <node concept="37vLTw" id="3WlLGfGGK$Z" role="2Oq$k0">
-                        <ref role="3cqZAo" node="3WlLGfGGDd3" resolve="node" />
+                </node>
+                <node concept="3clFbF" id="5qJ$Po8pgjF" role="3cqZAp">
+                  <node concept="37vLTI" id="5qJ$Po8pgjG" role="3clFbG">
+                    <node concept="37vLTw" id="5qJ$Po8pgjH" role="37vLTJ">
+                      <ref role="3cqZAo" node="3xJFGTMtP0l" resolve="id" />
+                    </node>
+                    <node concept="2YIFZM" id="5qJ$Po8pgjI" role="37vLTx">
+                      <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                      <ref role="37wK5l" to="wyt6:~String.format(java.lang.String,java.lang.Object...)" resolve="format" />
+                      <node concept="Xl_RD" id="5qJ$Po8pgjJ" role="37wK5m">
+                        <property role="Xl_RC" value="{\&quot;nodeId\&quot;=\&quot;%s\&quot;" />
                       </node>
-                      <node concept="liA8E" id="3WlLGfGGK_0" role="2OqNvi">
-                        <ref role="37wK5l" to="w1kc:~SNode.getNodeId()" resolve="getNodeId" />
+                      <node concept="2OqwBi" id="5qJ$Po8pgk0" role="37wK5m">
+                        <node concept="2OqwBi" id="5qJ$Po8pgk1" role="2Oq$k0">
+                          <node concept="37vLTw" id="5qJ$Po8pgk2" role="2Oq$k0">
+                            <ref role="3cqZAo" node="3WlLGfGGDd3" resolve="node" />
+                          </node>
+                          <node concept="liA8E" id="5qJ$Po8pgk3" role="2OqNvi">
+                            <ref role="37wK5l" to="w1kc:~SNode.getNodeId()" resolve="getNodeId" />
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="5qJ$Po8pgk4" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~Object.toString()" resolve="toString" />
+                        </node>
                       </node>
                     </node>
-                    <node concept="liA8E" id="3WlLGfGGK_1" role="2OqNvi">
-                      <ref role="37wK5l" to="wyt6:~Object.toString()" resolve="toString" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbC" id="5qJ$Po8lJmW" role="3clFbw">
+                <node concept="10Nm6u" id="5qJ$Po8lJn7" role="3uHU7w" />
+                <node concept="2OqwBi" id="5qJ$Po8lI6E" role="3uHU7B">
+                  <node concept="37vLTw" id="5qJ$Po8lI6F" role="2Oq$k0">
+                    <ref role="3cqZAo" node="3WlLGfGGDd3" resolve="node" />
+                  </node>
+                  <node concept="liA8E" id="5qJ$Po8lI6G" role="2OqNvi">
+                    <ref role="37wK5l" to="w1kc:~SNode.getModel()" resolve="getModel" />
+                  </node>
+                </node>
+              </node>
+              <node concept="9aQIb" id="5qJ$Po8p6JR" role="9aQIa">
+                <node concept="3clFbS" id="5qJ$Po8p6JS" role="9aQI4">
+                  <node concept="3clFbF" id="5qJ$Po8pctu" role="3cqZAp">
+                    <node concept="37vLTI" id="5qJ$Po8pejH" role="3clFbG">
+                      <node concept="37vLTw" id="5qJ$Po8pctt" role="37vLTJ">
+                        <ref role="3cqZAo" node="3xJFGTMtP0l" resolve="id" />
+                      </node>
+                      <node concept="2YIFZM" id="3WlLGfGGK$F" role="37vLTx">
+                        <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                        <ref role="37wK5l" to="wyt6:~String.format(java.lang.String,java.lang.Object...)" resolve="format" />
+                        <node concept="Xl_RD" id="3WlLGfGGK$G" role="37wK5m">
+                          <property role="Xl_RC" value="{\&quot;moduleId\&quot;=\&quot;%s\&quot;, \&quot;modelId\&quot;=\&quot;%s\&quot;, \&quot;nodeId\&quot;=\&quot;%s\&quot;" />
+                        </node>
+                        <node concept="2OqwBi" id="3WlLGfGGK$H" role="37wK5m">
+                          <node concept="2OqwBi" id="3WlLGfGGK$I" role="2Oq$k0">
+                            <node concept="2OqwBi" id="3WlLGfGGK$J" role="2Oq$k0">
+                              <node concept="2OqwBi" id="3WlLGfGGK$K" role="2Oq$k0">
+                                <node concept="37vLTw" id="3WlLGfGGK$L" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="3WlLGfGGDd3" resolve="node" />
+                                </node>
+                                <node concept="liA8E" id="3WlLGfGGK$M" role="2OqNvi">
+                                  <ref role="37wK5l" to="w1kc:~SNode.getModel()" resolve="getModel" />
+                                </node>
+                              </node>
+                              <node concept="liA8E" id="3WlLGfGGK$N" role="2OqNvi">
+                                <ref role="37wK5l" to="mhbf:~SModel.getModule()" resolve="getModule" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="3WlLGfGGK$O" role="2OqNvi">
+                              <ref role="37wK5l" to="lui2:~SModule.getModuleId()" resolve="getModuleId" />
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="3WlLGfGGK$P" role="2OqNvi">
+                            <ref role="37wK5l" to="wyt6:~Object.toString()" resolve="toString" />
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="3WlLGfGGK$Q" role="37wK5m">
+                          <node concept="2OqwBi" id="3WlLGfGGK$R" role="2Oq$k0">
+                            <node concept="2OqwBi" id="3WlLGfGGK$S" role="2Oq$k0">
+                              <node concept="37vLTw" id="3WlLGfGGK$T" role="2Oq$k0">
+                                <ref role="3cqZAo" node="3WlLGfGGDd3" resolve="node" />
+                              </node>
+                              <node concept="liA8E" id="3WlLGfGGK$U" role="2OqNvi">
+                                <ref role="37wK5l" to="w1kc:~SNode.getModel()" resolve="getModel" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="3WlLGfGGK$V" role="2OqNvi">
+                              <ref role="37wK5l" to="mhbf:~SModel.getModelId()" resolve="getModelId" />
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="3WlLGfGGK$W" role="2OqNvi">
+                            <ref role="37wK5l" to="wyt6:~Object.toString()" resolve="toString" />
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="3WlLGfGGK$X" role="37wK5m">
+                          <node concept="2OqwBi" id="3WlLGfGGK$Y" role="2Oq$k0">
+                            <node concept="37vLTw" id="3WlLGfGGK$Z" role="2Oq$k0">
+                              <ref role="3cqZAo" node="3WlLGfGGDd3" resolve="node" />
+                            </node>
+                            <node concept="liA8E" id="3WlLGfGGK_0" role="2OqNvi">
+                              <ref role="37wK5l" to="w1kc:~SNode.getNodeId()" resolve="getNodeId" />
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="3WlLGfGGK_1" role="2OqNvi">
+                            <ref role="37wK5l" to="wyt6:~Object.toString()" resolve="toString" />
+                          </node>
+                        </node>
+                      </node>
                     </node>
                   </node>
                 </node>
@@ -1770,6 +1844,16 @@
             </node>
             <node concept="3clFbJ" id="4Qde1YDP_s0" role="3cqZAp">
               <node concept="3clFbS" id="4Qde1YDP_s2" role="3clFbx">
+                <node concept="3cpWs8" id="5qJ$Po8n3dk" role="3cqZAp">
+                  <node concept="3cpWsn" id="5qJ$Po8n3dl" role="3cpWs9">
+                    <property role="TrG5h" value="embedded" />
+                    <property role="3TUv4t" value="true" />
+                    <node concept="10P_77" id="5qJ$Po8n0yB" role="1tU5fm" />
+                    <node concept="3clFbT" id="5qJ$Po8n3dm" role="33vP2m">
+                      <property role="3clFbU" value="true" />
+                    </node>
+                  </node>
+                </node>
                 <node concept="3clFbF" id="4Qde1YDPDqt" role="3cqZAp">
                   <node concept="37vLTI" id="4Qde1YDPDqu" role="3clFbG">
                     <node concept="37vLTw" id="4Qde1YDPDqv" role="37vLTJ">
@@ -1800,9 +1884,8 @@
                         <ref role="3cqZAo" to="agba:~BaseFont.IDENTITY_H" resolve="IDENTITY_H" />
                         <ref role="1PxDUh" to="agba:~BaseFont" resolve="BaseFont" />
                       </node>
-                      <node concept="10M0yZ" id="7$pHNLjFyV" role="37wK5m">
-                        <ref role="1PxDUh" to="agba:~BaseFont" resolve="BaseFont" />
-                        <ref role="3cqZAo" to="agba:~BaseFont.EMBEDDED" resolve="EMBEDDED" />
+                      <node concept="37vLTw" id="5qJ$Po8n3dn" role="37wK5m">
+                        <ref role="3cqZAo" node="5qJ$Po8n3dl" resolve="b" />
                       </node>
                     </node>
                   </node>
@@ -1862,12 +1945,13 @@
                                 <node concept="2ShNRf" id="1FWBPQDoCw9" role="3cqZAk">
                                   <node concept="1pGfFk" id="1FWBPQDoCwa" role="2ShVmc">
                                     <ref role="37wK5l" to="z60i:~Font.&lt;init&gt;(java.lang.String,int,int)" resolve="Font" />
-                                    <node concept="Xl_RD" id="1FWBPQDoCwb" role="37wK5m">
-                                      <property role="Xl_RC" value="Monospaced" />
-                                    </node>
-                                    <node concept="10M0yZ" id="1FWBPQDoCwc" role="37wK5m">
+                                    <node concept="10M0yZ" id="5qJ$Po8ly$q" role="37wK5m">
+                                      <ref role="3cqZAo" to="z60i:~Font.MONOSPACED" resolve="MONOSPACED" />
                                       <ref role="1PxDUh" to="z60i:~Font" resolve="Font" />
+                                    </node>
+                                    <node concept="10M0yZ" id="5qJ$Po8luG6" role="37wK5m">
                                       <ref role="3cqZAo" to="z60i:~Font.PLAIN" resolve="PLAIN" />
+                                      <ref role="1PxDUh" to="z60i:~Font" resolve="Font" />
                                     </node>
                                     <node concept="3cmrfG" id="1FWBPQDoCwd" role="37wK5m">
                                       <property role="3cmrfH" value="14" />

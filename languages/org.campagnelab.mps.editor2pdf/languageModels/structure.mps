@@ -10,20 +10,21 @@
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
+        <property id="1421157252384165432" name="memberId" index="3tVfz5" />
+      </concept>
+      <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
+        <reference id="1075010451642646892" name="defaultMember" index="1H5jkz" />
+        <child id="3348158742936976577" name="members" index="25R1y" />
+      </concept>
       <concept id="6054523464626862044" name="jetbrains.mps.lang.structure.structure.AttributeInfo_IsMultiple" flags="ng" index="tn0Fv">
         <property id="6054523464626875854" name="value" index="tnX3d" />
       </concept>
       <concept id="6054523464627964745" name="jetbrains.mps.lang.structure.structure.AttributeInfo_AttributedConcept" flags="ng" index="trNpa">
         <reference id="6054523464627965081" name="concept" index="trN6q" />
       </concept>
-      <concept id="1082978164219" name="jetbrains.mps.lang.structure.structure.EnumerationDataTypeDeclaration_Old" flags="ng" index="AxPO7">
-        <reference id="1083171729157" name="memberDataType" index="M4eZT" />
-        <reference id="1083241965437" name="defaultMember" index="Qgau1" />
-        <child id="1083172003582" name="member" index="M5hS2" />
-      </concept>
-      <concept id="1083171877298" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration_Old" flags="ig" index="M4N5e">
-        <property id="1083923523172" name="externalValue" index="1uS6qo" />
-        <property id="1083923523171" name="internalValue" index="1uS6qv" />
+      <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
+        <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
       </concept>
       <concept id="2992811758677295509" name="jetbrains.mps.lang.structure.structure.AttributeInfo" flags="ng" index="M6xJ_">
         <property id="7588428831955550663" name="role" index="Hh88m" />
@@ -73,7 +74,7 @@
     <node concept="1TJgyi" id="4E_30JhV9JL" role="1TKVEl">
       <property role="TrG5h" value="outputFormat" />
       <property role="IQ2nx" value="5378718574870043633" />
-      <ref role="AX2Wp" node="4E_30JhV9Js" resolve="RenderingOutputFormat" />
+      <ref role="AX2Wp" node="1$0urrTKPyG" resolve="RenderingOutputFormat" />
     </node>
     <node concept="1TJgyj" id="7_Pg6u6z_YY" role="1TKVEi">
       <property role="20lmBu" value="reference" />
@@ -138,7 +139,7 @@
     <node concept="1TJgyj" id="L_Y2cWAPmk" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="diagrams" />
-      <property role="20lbJX" value="0..n" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
       <property role="IQ2ns" value="893392931327268244" />
       <ref role="20lvS9" node="L_Y2cWAPmm" resolve="DiagramRef" />
     </node>
@@ -153,22 +154,9 @@
     <node concept="1TJgyj" id="L_Y2cWAPmn" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="diagram" />
-      <property role="20lbJX" value="1" />
+      <property role="20lbJX" value="fLJekj4/_1" />
       <property role="IQ2ns" value="893392931327268247" />
       <ref role="20lvS9" node="7_Pg6u6xjfG" resolve="EditorAnnotation" />
-    </node>
-  </node>
-  <node concept="AxPO7" id="4E_30JhV9Js">
-    <property role="TrG5h" value="RenderingOutputFormat" />
-    <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
-    <ref role="Qgau1" node="4E_30JhV9JI" />
-    <node concept="M4N5e" id="4E_30JhV9Jt" role="M5hS2">
-      <property role="1uS6qo" value="SVG" />
-      <property role="1uS6qv" value="0" />
-    </node>
-    <node concept="M4N5e" id="4E_30JhV9JI" role="M5hS2">
-      <property role="1uS6qo" value="PDF" />
-      <property role="1uS6qv" value="1" />
     </node>
   </node>
   <node concept="1TIwiD" id="2GSP0Mv9R8y">
@@ -179,6 +167,19 @@
       <property role="TrG5h" value="filename" />
       <property role="IQ2nx" value="3114472293001556515" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="25R3W" id="1$0urrTKPyG">
+    <property role="3F6X1D" value="1801573677729536172" />
+    <property role="TrG5h" value="RenderingOutputFormat" />
+    <ref role="1H5jkz" node="1$0urrTKPGu" resolve="PDF" />
+    <node concept="25R33" id="1$0urrTKPyH" role="25R1y">
+      <property role="3tVfz5" value="1801573677729536173" />
+      <property role="TrG5h" value="SVG" />
+    </node>
+    <node concept="25R33" id="1$0urrTKPGu" role="25R1y">
+      <property role="3tVfz5" value="1801573677729536798" />
+      <property role="TrG5h" value="PDF" />
     </node>
   </node>
 </model>

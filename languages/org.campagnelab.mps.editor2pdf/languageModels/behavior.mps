@@ -227,17 +227,13 @@
         <child id="2034914114981261755" name="throwable" index="RRSow" />
         <child id="2034914114981261753" name="message" index="RRSoy" />
       </concept>
-      <concept id="1167227138527" name="jetbrains.mps.baseLanguage.logging.structure.LogStatement" flags="ng" index="34ab3g">
-        <property id="1167245565795" name="severity" index="35gtTG" />
-        <child id="1167227463056" name="logExpression" index="34bqiv" />
-      </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="4705942098322467729" name="jetbrains.mps.lang.smodel.structure.EnumMemberReference" flags="ng" index="21nZrQ">
+        <reference id="4705942098322467736" name="decl" index="21nZrZ" />
+      </concept>
       <concept id="1138661924179" name="jetbrains.mps.lang.smodel.structure.Property_SetOperation" flags="nn" index="tyxLq">
         <child id="1138662048170" name="value" index="tz02z" />
-      </concept>
-      <concept id="1138676077309" name="jetbrains.mps.lang.smodel.structure.EnumMemberReference_Old" flags="nn" index="uoxfO">
-        <reference id="1138676095763" name="enumMember" index="uo_Cq" />
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1176109685393" name="jetbrains.mps.lang.smodel.structure.Model_RootsIncludingImportedOperation" flags="nn" index="3lApI0">
@@ -1158,21 +1154,6 @@
       <node concept="3Tm1VV" id="7OORWOlZWwD" role="1B3o_S" />
       <node concept="3cqZAl" id="7OORWOlZWwE" role="3clF45" />
       <node concept="3clFbS" id="7OORWOlZWwF" role="3clF47">
-        <node concept="1X3_iC" id="46q0f$Biez3" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="34ab3g" id="7OORWOm2hAl" role="8Wnug">
-            <property role="35gtTG" value="info" />
-            <node concept="3cpWs3" id="7OORWOm2hM3" role="34bqiv">
-              <node concept="37vLTw" id="7OORWOm2hNO" role="3uHU7w">
-                <ref role="3cqZAo" node="7OORWOlZWwB" resolve="collection" />
-              </node>
-              <node concept="Xl_RD" id="7OORWOm2hAn" role="3uHU7B">
-                <property role="Xl_RC" value="Visiting collection: " />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3cpWs8" id="7OORWOm0g5I" role="3cqZAp">
           <node concept="3cpWsn" id="7OORWOm0g5L" role="3cpWs9">
             <property role="TrG5h" value="it" />
@@ -1270,21 +1251,6 @@
       <node concept="3Tm1VV" id="7OORWOlZWX3" role="1B3o_S" />
       <node concept="3cqZAl" id="7OORWOlZWX4" role="3clF45" />
       <node concept="3clFbS" id="7OORWOlZWX5" role="3clF47">
-        <node concept="1X3_iC" id="46q0f$Biez4" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="34ab3g" id="7OORWOm2cNd" role="8Wnug">
-            <property role="35gtTG" value="info" />
-            <node concept="3cpWs3" id="7OORWOm2cVv" role="34bqiv">
-              <node concept="37vLTw" id="7OORWOm2cWQ" role="3uHU7w">
-                <ref role="3cqZAo" node="7OORWOlZWX1" resolve="component" />
-              </node>
-              <node concept="Xl_RD" id="7OORWOm2cNf" role="3uHU7B">
-                <property role="Xl_RC" value="Painting component:" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbF" id="7OORWOm6sZD" role="3cqZAp">
           <node concept="2OqwBi" id="7OORWOm6t1$" role="3clFbG">
             <node concept="37vLTw" id="7OORWOm6sZC" role="2Oq$k0">
@@ -2919,8 +2885,8 @@
               </node>
             </node>
             <node concept="tyxLq" id="1tqtQHpl6zU" role="2OqNvi">
-              <node concept="uoxfO" id="1tqtQHpl6A9" role="tz02z">
-                <ref role="uo_Cq" to="3t4d:4E_30JhV9JI" />
+              <node concept="21nZrQ" id="1$0urrTLb5O" role="tz02z">
+                <ref role="21nZrZ" to="3t4d:1$0urrTKPGu" resolve="PDF" />
               </node>
             </node>
           </node>

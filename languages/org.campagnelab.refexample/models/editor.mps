@@ -2,7 +2,7 @@
 <model ref="r:44be36aa-faa4-4ba7-8320-be557aaa1c86(org.campagnelab.refexample.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="11" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="14" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -70,9 +70,12 @@
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
+        <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
+      </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
-        <reference id="1171315804605" name="concept" index="2RRcyH" />
+        <child id="6750920497477046361" name="conceptArgument" index="3MHsoP" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -125,7 +128,9 @@
                     <node concept="I4A8Y" id="3xJFGTMtv_a" role="2OqNvi" />
                   </node>
                   <node concept="2RRcyG" id="3xJFGTMtvFt" role="2OqNvi">
-                    <ref role="2RRcyH" to="hkvc:3xJFGTMtvqY" resolve="RefTarget" />
+                    <node concept="chp4Y" id="2y_rcZoI8kB" role="3MHsoP">
+                      <ref role="cht4Q" to="hkvc:3xJFGTMtvqY" resolve="RefTarget" />
+                    </node>
                   </node>
                 </node>
                 <node concept="1yVyf7" id="3xJFGTMtylE" role="2OqNvi" />

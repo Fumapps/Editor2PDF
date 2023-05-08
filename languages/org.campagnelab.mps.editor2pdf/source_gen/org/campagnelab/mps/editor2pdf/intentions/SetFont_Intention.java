@@ -4,21 +4,18 @@ package org.campagnelab.mps.editor2pdf.intentions;
 
 import jetbrains.mps.intentions.AbstractIntentionDescriptor;
 import jetbrains.mps.openapi.intentions.IntentionFactory;
-import org.apache.log4j.Logger;
-import org.apache.log4j.LogManager;
+import jetbrains.mps.logging.Logger;
 import jetbrains.mps.openapi.intentions.Kind;
 import jetbrains.mps.smodel.SNodePointer;
-import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.openapi.editor.EditorContext;
 import java.util.Collection;
 import jetbrains.mps.openapi.intentions.IntentionExecutable;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.openapi.editor.EditorContext;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
 import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
 import java.io.File;
-import jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime;
-import org.apache.log4j.Level;
 import com.intellij.openapi.util.SystemInfo;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import java.io.FilenameFilter;
@@ -27,34 +24,36 @@ import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
 import jetbrains.mps.intentions.AbstractIntentionExecutable;
 import jetbrains.mps.openapi.intentions.ParameterizedIntentionExecutable;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class SetFont_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
-  private static final Logger LOG = LogManager.getLogger(SetFont_Intention.class);
+  private static final Logger LOG = Logger.getLogger(SetFont_Intention.class);
+
   public SetFont_Intention() {
     super(Kind.NORMAL, true, new SNodePointer("r:6bb9f222-b46c-45b3-85b5-99e8faaeadce(org.campagnelab.mps.editor2pdf.intentions)", "5588184421281454220"));
   }
+
   @Override
   public String getPresentation() {
     return "SetFont";
   }
-  @Override
-  public boolean isApplicable(final SNode node, final EditorContext editorContext) {
-    return true;
-  }
+
   @Override
   public boolean isSurroundWith() {
     return false;
   }
+
   public Collection<IntentionExecutable> instances(final SNode node, final EditorContext context) {
     List<IntentionExecutable> list = ListSequence.fromList(new ArrayList<IntentionExecutable>());
     List<Tuples._2<String, File>> paramList = parameter(node, context);
     if (paramList != null) {
       for (Tuples._2<String, File> param : paramList) {
-        ListSequence.fromList(list).addElement(new SetFont_Intention.IntentionImplementation(param));
+        ListSequence.fromList(list).addElement(new IntentionImplementation(param));
       }
     }
     return list;
@@ -63,8 +62,8 @@ public final class SetFont_Intention extends AbstractIntentionDescriptor impleme
     final List<Tuples._2<String, File>> files = ListSequence.fromList(new ArrayList<Tuples._2<String, File>>());
     List<String> pluginLocationRoot = ListSequence.fromList(new ArrayList<String>());
     String pathSelector = System.getProperty("idea.paths.selector");
-    if (LOG.isInfoEnabled()) {
-      LoggingRuntime.legacyLog(Level.INFO, "With pathSelector (property idea.paths.selector)=" + pathSelector, SetFont_Intention.class, null);
+    if (LOG.isInfoLevel()) {
+      LOG.info("With pathSelector (property idea.paths.selector)=" + pathSelector);
     }
     boolean isMac = SystemInfo.isMac;
     String userHome = System.getProperty("user.home");
@@ -92,23 +91,42 @@ public final class SetFont_Intention extends AbstractIntentionDescriptor impleme
     public IntentionImplementation(Tuples._2<String, File> parameter) {
       myParameter = parameter;
     }
+
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
       return "Configure Font " + myParameter._0();
     }
+
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
-      if ((SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c993928L, 0x2b38d40c9f277226L, "font")) == null)) {
-        SLinkOperations.setTarget(node, MetaAdapterFactory.getContainmentLink(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c993928L, 0x2b38d40c9f277226L, "font"), SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0x2b38d40c9f277222L, "org.campagnelab.mps.editor2pdf.structure.Font")));
+      if ((SLinkOperations.getTarget(node, LINKS.font$3NJi) == null)) {
+        SLinkOperations.setTarget(node, LINKS.font$3NJi, SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0x2b38d40c9f277222L, "org.campagnelab.mps.editor2pdf.structure.Font")));
       }
-      SPropertyOperations.set(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c993928L, 0x2b38d40c9f277226L, "font")), MetaAdapterFactory.getProperty(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0x2b38d40c9f277222L, 0x2b38d40c9f277223L, "filename"), myParameter._1().getAbsolutePath());
+      SPropertyOperations.assign(SLinkOperations.getTarget(node, LINKS.font$3NJi), PROPS.filename$PTSM, myParameter._1().getAbsolutePath());
     }
+
+    @Override
+    public boolean isApplicable(final SNode node, final EditorContext editorContext) {
+      return true;
+    }
+
+
+
     @Override
     public IntentionDescriptor getDescriptor() {
       return SetFont_Intention.this;
     }
+
     public Object getParameter() {
       return myParameter;
     }
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink font$3NJi = MetaAdapterFactory.getContainmentLink(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c993928L, 0x2b38d40c9f277226L, "font");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty filename$PTSM = MetaAdapterFactory.getProperty(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0x2b38d40c9f277222L, 0x2b38d40c9f277223L, "filename");
   }
 }

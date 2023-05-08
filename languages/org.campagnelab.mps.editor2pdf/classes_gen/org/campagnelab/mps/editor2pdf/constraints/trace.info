@@ -17,14 +17,15 @@
   </root>
   <root nodeRef="r:00a765fe-ba96-4e98-831a-0d72872191a3(org.campagnelab.mps.editor2pdf.constraints)/8751972264247719107">
     <file name="EditorAnnotation_Constraints.java">
-      <node id="8751972264247719107" at="23,41,24,165" concept="9" />
+      <node id="8751972264247719107" at="23,41,24,40" concept="9" />
       <node id="8751972264247719107" at="31,127,32,128" concept="4" />
       <node id="8751972264247719107" at="32,128,33,0" concept="6" />
       <node id="8751972264247719107" at="34,55,35,71" concept="1" />
       <node id="8751972264247719107" at="36,9,37,0" concept="6" />
       <node id="8751972264247719107" at="37,0,38,22" concept="5" />
-      <node id="5569208356153140011" at="44,39,45,271" concept="5" />
+      <node id="5569208356153140011" at="44,39,45,116" concept="5" />
       <node id="8751972264247719107" at="49,0,50,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="8751972264247719107" at="52,0,53,0" concept="7" trace="EditorAnnotation$wP" />
       <node id="8751972264247719107" at="23,0,26,0" concept="0" trace="EditorAnnotation_Constraints#()V" />
       <node id="8751972264247719107" at="33,0,36,9" concept="2" />
       <node id="5569208356153140009" at="44,0,47,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
@@ -33,9 +34,9 @@
       <node id="8751972264247719107" at="30,0,40,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
       <node id="8751972264247719107" at="28,103,40,6" concept="5" />
       <node id="8751972264247719107" at="27,0,42,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <scope id="8751972264247719107" at="23,41,24,165" />
+      <scope id="8751972264247719107" at="23,41,24,40" />
       <scope id="8751972264247719107" at="34,55,35,71" />
-      <scope id="5569208356153140010" at="44,39,45,271" />
+      <scope id="5569208356153140010" at="44,39,45,116" />
       <scope id="8751972264247719107" at="23,0,26,0" />
       <scope id="5569208356153140009" at="44,0,47,0">
         <var name="it" id="5569208356153140009" />
@@ -56,9 +57,10 @@
       </scope>
       <scope id="8751972264247719107" at="28,103,40,6" />
       <scope id="8751972264247719107" at="27,0,42,0" />
+      <unit id="8751972264247719107" at="51,0,54,0" name="org.campagnelab.mps.editor2pdf.constraints.EditorAnnotation_Constraints$CONCEPTS" />
       <unit id="5569208356153140009" at="43,102,47,5" name="org.campagnelab.mps.editor2pdf.constraints.EditorAnnotation_Constraints$2" />
       <unit id="8751972264247719107" at="29,15,40,5" name="org.campagnelab.mps.editor2pdf.constraints.EditorAnnotation_Constraints$1" />
-      <unit id="8751972264247719107" at="22,0,51,0" name="org.campagnelab.mps.editor2pdf.constraints.EditorAnnotation_Constraints" />
+      <unit id="8751972264247719107" at="22,0,55,0" name="org.campagnelab.mps.editor2pdf.constraints.EditorAnnotation_Constraints" />
     </file>
   </root>
 </debug-info>

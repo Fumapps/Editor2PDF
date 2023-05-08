@@ -4,12 +4,16 @@ package org.campagnelab.mps.editor2pdf.structure;
 
 import jetbrains.mps.smodel.runtime.BaseStructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptDescriptor;
+import jetbrains.mps.smodel.runtime.EnumerationDescriptor;
 import java.util.Collection;
 import java.util.Arrays;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
+import jetbrains.mps.smodel.runtime.DataTypeDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
+import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
+import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDefaultOutputDirectory = createDescriptorForDefaultOutputDirectory();
@@ -18,10 +22,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEditorAnnotation = createDescriptorForEditorAnnotation();
   /*package*/ final ConceptDescriptor myConceptFont = createDescriptorForFont();
   /*package*/ final ConceptDescriptor myConceptPdfCollection = createDescriptorForPdfCollection();
-  private final LanguageConceptSwitch myConceptIndex;
+  /*package*/ final EnumerationDescriptor myEnumerationRenderingOutputFormat = new EnumerationDescriptor_RenderingOutputFormat();
+  private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
-    myConceptIndex = new LanguageConceptSwitch();
+    myIndexSwitch = new LanguageConceptSwitch();
+  }
+
+
+  @Override
+  public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
+    deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
   }
 
   @Override
@@ -32,7 +43,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
-    switch (myConceptIndex.index(id)) {
+    switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.DefaultOutputDirectory:
         return myConceptDefaultOutputDirectory;
       case LanguageConceptSwitch.DiagramOutputDirectory:
@@ -50,15 +61,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     }
   }
 
+  @Override
+  public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
+    return Arrays.asList(myEnumerationRenderingOutputFormat);
+  }
+
   /*package*/ int internalIndex(SAbstractConcept c) {
-    return myConceptIndex.index(c);
+    return myIndexSwitch.index(c);
   }
 
   private static ConceptDescriptor createDescriptorForDefaultOutputDirectory() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("org.campagnelab.mps.editor2pdf", "DefaultOutputDirectory", 0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c995462L);
     b.class_(false, false, false);
-    b.super_("org.campagnelab.mps.editor2pdf.structure.DiagramOutputDirectory", 0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c993928L);
+    // extends: org.campagnelab.mps.editor2pdf.structure.DiagramOutputDirectory
+    b.super_(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c993928L);
     b.origin("r:7a57a805-2fc1-49f5-991a-6bd531b99008(org.campagnelab.mps.editor2pdf.structure)/893392931327136866");
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDiagramOutputDirectory() {
@@ -66,7 +84,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:7a57a805-2fc1-49f5-991a-6bd531b99008(org.campagnelab.mps.editor2pdf.structure)/893392931327129896");
-    b.prop("path", 0xc65f8233c993964L, "893392931327129956");
+    b.version(3);
+    b.property("path", 0xc65f8233c993964L).type(PrimitiveTypeId.STRING).origin("893392931327129956").done();
     b.aggregate("font", 0x2b38d40c9f277226L).target(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0x2b38d40c9f277222L).optional(true).ordered(true).multiple(false).origin("3114472293001556518").done();
     b.alias("Output");
     return b.create();
@@ -75,25 +94,29 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("org.campagnelab.mps.editor2pdf", "DiagramRef", 0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c9b5596L);
     b.class_(false, false, false);
     b.origin("r:7a57a805-2fc1-49f5-991a-6bd531b99008(org.campagnelab.mps.editor2pdf.structure)/893392931327268246");
+    b.version(3);
     b.associate("diagram", 0xc65f8233c9b5597L).target(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0x79754067868533ecL).optional(false).origin("893392931327268247").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForEditorAnnotation() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("org.campagnelab.mps.editor2pdf", "EditorAnnotation", 0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0x79754067868533ecL);
     b.class_(false, false, false);
-    b.super_("jetbrains.mps.lang.core.structure.NodeAttribute", 0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da54L);
+    // extends: jetbrains.mps.lang.core.structure.NodeAttribute
+    b.super_(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da54L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:7a57a805-2fc1-49f5-991a-6bd531b99008(org.campagnelab.mps.editor2pdf.structure)/8751972264247112684");
-    b.prop("outputFormat", 0x4aa50c0bd1ec9bf1L, "5378718574870043633");
+    b.version(3);
+    b.property("outputFormat", 0x4aa50c0bd1ec9bf1L).type(MetaIdFactory.dataTypeId(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0x190079b6f9c358acL)).origin("5378718574870043633").done();
     b.associate("editor", 0x79754067868e5fbeL).target(0x18bc659203a64e29L, 0xa83a7ff23bde13baL, 0x10f7df344a9L).optional(true).origin("8751972264247713726").done();
-    b.associate("outputTo", 0xc65f8233c99545fL).target(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c993928L).optional(true).origin("893392931327136863").done();
+    b.associate("outputTo", 0xc65f8233c99545fL).target(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c993928L).optional(false).origin("893392931327136863").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForFont() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("org.campagnelab.mps.editor2pdf", "Font", 0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0x2b38d40c9f277222L);
     b.class_(false, false, false);
     b.origin("r:7a57a805-2fc1-49f5-991a-6bd531b99008(org.campagnelab.mps.editor2pdf.structure)/3114472293001556514");
-    b.prop("filename", 0x2b38d40c9f277223L, "3114472293001556515");
+    b.version(3);
+    b.property("filename", 0x2b38d40c9f277223L).type(PrimitiveTypeId.STRING).origin("3114472293001556515").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPdfCollection() {
@@ -101,6 +124,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:7a57a805-2fc1-49f5-991a-6bd531b99008(org.campagnelab.mps.editor2pdf.structure)/893392931327268188");
+    b.version(3);
     b.aggregate("diagrams", 0xc65f8233c9b5594L).target(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c9b5596L).optional(true).ordered(true).multiple(true).origin("893392931327268244").done();
     b.alias("pdf-collection");
     return b.create();

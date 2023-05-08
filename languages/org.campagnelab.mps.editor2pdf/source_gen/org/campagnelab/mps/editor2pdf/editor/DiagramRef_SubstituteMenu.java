@@ -10,24 +10,26 @@ import jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem;
 import jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext;
 import java.util.ArrayList;
 import jetbrains.mps.lang.editor.menus.substitute.ConstraintsFilteringSubstituteMenuPartDecorator;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase;
 import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.lang.editor.menus.substitute.ReferenceScopeSubstituteMenuPart;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.lang.editor.menus.ConceptMenusPart;
 import java.util.Collection;
 import jetbrains.mps.smodel.ConceptDescendantsCache;
-import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.lang.editor.menus.substitute.DefaultSubstituteMenuLookup;
 import jetbrains.mps.smodel.language.LanguageRegistry;
+import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 
 public class DiagramRef_SubstituteMenu extends SubstituteMenuBase {
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new DiagramRef_SubstituteMenu.SMP_ReferenceScope_a06p18_a(), MetaAdapterFactory.getConcept(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c9b5596L, "org.campagnelab.mps.editor2pdf.structure.DiagramRef")));
-    result.add(new DiagramRef_SubstituteMenu.SMP_Subconcepts_a06p18_b());
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_a06p18_a(), CONCEPTS.DiagramRef$po));
+    result.add(new SMP_Subconcepts_a06p18_b());
     return result;
   }
 
@@ -44,10 +46,11 @@ public class DiagramRef_SubstituteMenu extends SubstituteMenuBase {
   }
 
 
-  public static class SMP_ReferenceScope_a06p18_a extends ReferenceScopeSubstituteMenuPart {
+  public class SMP_ReferenceScope_a06p18_a extends ReferenceScopeSubstituteMenuPart {
 
     public SMP_ReferenceScope_a06p18_a() {
-      super(MetaAdapterFactory.getConcept(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c9b5596L, "org.campagnelab.mps.editor2pdf.structure.DiagramRef"), MetaAdapterFactory.getReferenceLink(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c9b5596L, 0xc65f8233c9b5597L, "diagram"));
+      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
+      super((SAbstractConcept) CONCEPTS.DiagramRef$po, LINKS.diagram$Sh5M);
     }
     @NotNull
     @Override
@@ -64,7 +67,7 @@ public class DiagramRef_SubstituteMenu extends SubstituteMenuBase {
   }
   public class SMP_Subconcepts_a06p18_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(MetaAdapterFactory.getConcept(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c9b5596L, "org.campagnelab.mps.editor2pdf.structure.DiagramRef"));
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.DiagramRef$po);
     }
     @NotNull
     @Override
@@ -82,5 +85,13 @@ public class DiagramRef_SubstituteMenu extends SubstituteMenuBase {
     protected Collection<SubstituteMenuItem> createItemsForConcept(SubstituteMenuContext context, SAbstractConcept concept) {
       return context.createItems(new DefaultSubstituteMenuLookup(LanguageRegistry.getInstance(context.getEditorContext().getRepository()), concept));
     }
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept DiagramRef$po = MetaAdapterFactory.getConcept(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c9b5596L, "org.campagnelab.mps.editor2pdf.structure.DiagramRef");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SReferenceLink diagram$Sh5M = MetaAdapterFactory.getReferenceLink(0x93bc01ac08ca4f11L, 0x9c7d614d04055dfbL, 0xc65f8233c9b5596L, 0xc65f8233c9b5597L, "diagram");
   }
 }

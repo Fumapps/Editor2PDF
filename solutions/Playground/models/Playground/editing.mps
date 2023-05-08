@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:6a66b146-ac09-46e7-a5cf-62b1c04652a3(Playground.editing)" doNotGenerate="true">
+<model ref="r:6a66b146-ac09-46e7-a5cf-62b1c04652a3(Playground.editing)">
   <persistence version="9" />
+  <attribute name="doNotGenerate" value="true" />
   <languages>
     <use id="93bc01ac-08ca-4f11-9c7d-614d04055dfb" name="org.campagnelab.mps.editor2pdf" version="0" />
     <use id="ed6d7656-532c-4bc2-81d1-af945aeb8280" name="jetbrains.mps.baseLanguage.blTypes" version="0" />
     <use id="4caf0310-491e-41f5-8a9b-2006b3a94898" name="jetbrains.mps.execution.util" version="0" />
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="6" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
     <use id="698a8d22-a104-47a0-ba8d-10e3ec237f13" name="jetbrains.mps.build.workflow" version="0" />
     <use id="58f98fef-90ad-4b72-a390-fad66ec7005a" name="jetbrains.mps.core.properties" version="0" />
     <use id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build" version="0" />
@@ -138,7 +139,7 @@
     <node concept="3ZW7eb" id="2q2uwvmrud7" role="lGtFl">
       <property role="2ripvU" value="1" />
       <property role="TrG5h" value="FIG" />
-      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
+      <ref role="KZaLW" node="4E_30JhWk7G" />
     </node>
   </node>
   <node concept="KZc4b" id="4E_30JhWk7G">
@@ -165,7 +166,7 @@
               <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
             </node>
             <node concept="liA8E" id="3gGkzkuBEXj" role="2OqNvi">
-              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String)" resolve="println" />
               <node concept="Xl_RD" id="3gGkzkuBEXk" role="37wK5m">
                 <property role="Xl_RC" value="" />
               </node>
@@ -178,16 +179,16 @@
     <node concept="3ZW7eb" id="3gGkzkuBF2n" role="lGtFl">
       <property role="2ripvU" value="1" />
       <property role="TrG5h" value="Another" />
-      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
+      <ref role="KZaLW" node="4E_30JhWk7G" />
     </node>
   </node>
   <node concept="KZEPZ" id="3gGkzkuBEQa">
     <property role="TrG5h" value="MyFigures" />
     <node concept="KZEQP" id="3gGkzkuBEVg" role="KZEQR">
-      <ref role="KZEQO" node="2q2uwvmrud7" resolve="FIG" />
+      <ref role="KZEQO" node="2q2uwvmrud7" />
     </node>
     <node concept="KZEQP" id="3gGkzkuBEVi" role="KZEQR">
-      <ref role="KZEQO" node="3gGkzkuBF2n" resolve="Another" />
+      <ref role="KZEQO" node="3gGkzkuBF2n" />
     </node>
   </node>
   <node concept="1l3spW" id="3WlLGfGCNVI">
@@ -203,16 +204,16 @@
     <node concept="3ZW7eb" id="3WlLGfGCNVL" role="lGtFl">
       <property role="2ripvU" value="0" />
       <property role="TrG5h" value="build" />
-      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
+      <ref role="KZaLW" node="4E_30JhWk7G" />
     </node>
   </node>
   <node concept="KZEPZ" id="3WlLGfGCXxN">
     <property role="TrG5h" value="collection" />
     <node concept="KZEQP" id="3WlLGfGCXxO" role="KZEQR">
-      <ref role="KZEQO" node="2q2uwvmrud7" resolve="FIG" />
+      <ref role="KZEQO" node="2q2uwvmrud7" />
     </node>
     <node concept="KZEQP" id="3WlLGfGCXxQ" role="KZEQR">
-      <ref role="KZEQO" node="3WlLGfGCNVL" resolve="build" />
+      <ref role="KZEQO" node="3WlLGfGCNVL" />
     </node>
   </node>
   <node concept="1a6_xK" id="3xJFGTMtLn6">
@@ -226,16 +227,16 @@
     <node concept="3ZW7eb" id="3xJFGTMtQvX" role="lGtFl">
       <property role="2ripvU" value="0" />
       <property role="TrG5h" value="SomeNodeWithRef" />
-      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
+      <ref role="KZaLW" node="4E_30JhWk7G" />
     </node>
   </node>
   <node concept="1a6_xP" id="3xJFGTMtLn9">
     <property role="TrG5h" value="HasSomeRef" />
-    <ref role="1a6_xM" node="3xJFGTMtLn7" resolve="T2" />
+    <ref role="1a6_xM" node="3xJFGTMtLn7" />
     <node concept="3ZW7eb" id="3xJFGTMtLna" role="lGtFl">
       <property role="2ripvU" value="0" />
       <property role="TrG5h" value="HasSomeRef" />
-      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
+      <ref role="KZaLW" node="4E_30JhWk7G" />
     </node>
   </node>
 </model>

@@ -20,10 +20,20 @@ dependencies {
     implementation 'com.itextpdf:itextpdf:5.5.13.3:javadoc'
     implementation 'com.itextpdf:itext-pdfa:5.5.13.3:javadoc'
     implementation 'com.itextpdf:itext-xtra:5.5.13.3:javadoc'
+    implementation 'org.jfree:jfreesvg:3.4.3'
 }
 
-task copyDeps(type: Copy) {
-    from configurations.compileClasspath
-    into 'solutions/com.itext'
-    include 'itext*.jar'
+task copyDeps {
+    doLast {
+        copy {
+            from configurations.compileClasspath
+            into 'solutions/com.itext'
+            include 'itext*.jar'
+        }
+        copy {
+            from configurations.compileClasspath
+            into 'solutions/org.jfreesvg'
+            include 'jfreesvg*.jar'
+        }
+    }
 }

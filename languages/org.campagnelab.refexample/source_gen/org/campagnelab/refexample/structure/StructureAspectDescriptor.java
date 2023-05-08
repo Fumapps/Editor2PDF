@@ -15,10 +15,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptNavigateToNode = createDescriptorForNavigateToNode();
   /*package*/ final ConceptDescriptor myConceptRefTarget = createDescriptorForRefTarget();
   /*package*/ final ConceptDescriptor myConceptWithRef = createDescriptorForWithRef();
-  private final LanguageConceptSwitch myConceptIndex;
+  private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
-    myConceptIndex = new LanguageConceptSwitch();
+    myIndexSwitch = new LanguageConceptSwitch();
+  }
+
+
+  @Override
+  public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
+    deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
   }
 
   @Override
@@ -29,7 +35,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
-    switch (myConceptIndex.index(id)) {
+    switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.NavigateToNode:
         return myConceptNavigateToNode;
       case LanguageConceptSwitch.RefTarget:
@@ -41,8 +47,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     }
   }
 
+
   /*package*/ int internalIndex(SAbstractConcept c) {
-    return myConceptIndex.index(c);
+    return myIndexSwitch.index(c);
   }
 
   private static ConceptDescriptor createDescriptorForNavigateToNode() {
@@ -50,6 +57,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:78e0e320-052f-4ecd-8caf-a4138af69c16(org.campagnelab.refexample.structure)/4066661190245676872");
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForRefTarget() {
@@ -57,6 +65,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:78e0e320-052f-4ecd-8caf-a4138af69c16(org.campagnelab.refexample.structure)/4066661190245676734");
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWithRef() {
@@ -64,6 +73,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:78e0e320-052f-4ecd-8caf-a4138af69c16(org.campagnelab.refexample.structure)/4066661190245676731");
+    b.version(3);
     b.associate("ref", 0x386faece7275f6bcL).target(0x85d7c0cc4aa84799L, 0x8fbab6f80d065fa5L, 0x386faece7275f6beL).optional(true).origin("4066661190245676732").done();
     return b.create();
   }

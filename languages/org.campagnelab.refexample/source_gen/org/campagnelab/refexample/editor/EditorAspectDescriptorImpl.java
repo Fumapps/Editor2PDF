@@ -15,8 +15,8 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
   @NotNull
   public Collection<ConceptEditor> getDeclaredEditors(SAbstractConcept concept) {
-    SAbstractConcept cncpt_a0a = ((SAbstractConcept) concept);
-    switch (index_xbvbvu_a0a.index(cncpt_a0a)) {
+    SAbstractConcept cncpt = ((SAbstractConcept) concept);
+    switch (conceptIndex.index(cncpt)) {
       case 0:
         return Collections.<ConceptEditor>singletonList(new NavigateToNode_Editor());
       case 1:
@@ -30,5 +30,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex index_xbvbvu_a0a = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x85d7c0cc4aa84799L, 0x8fbab6f80d065fa5L, 0x386faece7275f748L), MetaIdFactory.conceptId(0x85d7c0cc4aa84799L, 0x8fbab6f80d065fa5L, 0x386faece7275f6beL), MetaIdFactory.conceptId(0x85d7c0cc4aa84799L, 0x8fbab6f80d065fa5L, 0x386faece7275f6bbL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x85d7c0cc4aa84799L, 0x8fbab6f80d065fa5L, 0x386faece7275f748L), MetaIdFactory.conceptId(0x85d7c0cc4aa84799L, 0x8fbab6f80d065fa5L, 0x386faece7275f6beL), MetaIdFactory.conceptId(0x85d7c0cc4aa84799L, 0x8fbab6f80d065fa5L, 0x386faece7275f6bbL)).seal();
 }

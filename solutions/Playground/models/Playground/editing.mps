@@ -139,12 +139,12 @@
     <node concept="3ZW7eb" id="2q2uwvmrud7" role="lGtFl">
       <property role="2ripvU" value="1" />
       <property role="TrG5h" value="FIG" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
   <node concept="KZc4b" id="4E_30JhWk7G">
     <property role="TrG5h" value="FIGURES" />
-    <property role="KZc57" value="/Users/mas2182/tmp/Editor2PDF" />
+    <property role="KZc57" value="D:\TEMP\Editor2Pdf" />
   </node>
   <node concept="312cEu" id="3gGkzkuBEVv">
     <property role="TrG5h" value="SomeOtherClass" />
@@ -179,16 +179,16 @@
     <node concept="3ZW7eb" id="3gGkzkuBF2n" role="lGtFl">
       <property role="2ripvU" value="1" />
       <property role="TrG5h" value="Another" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
   <node concept="KZEPZ" id="3gGkzkuBEQa">
     <property role="TrG5h" value="MyFigures" />
     <node concept="KZEQP" id="3gGkzkuBEVg" role="KZEQR">
-      <ref role="KZEQO" node="2q2uwvmrud7" />
+      <ref role="KZEQO" node="2q2uwvmrud7" resolve="FIG" />
     </node>
     <node concept="KZEQP" id="3gGkzkuBEVi" role="KZEQR">
-      <ref role="KZEQO" node="3gGkzkuBF2n" />
+      <ref role="KZEQO" node="3gGkzkuBF2n" resolve="Another" />
     </node>
   </node>
   <node concept="1l3spW" id="3WlLGfGCNVI">
@@ -204,16 +204,16 @@
     <node concept="3ZW7eb" id="3WlLGfGCNVL" role="lGtFl">
       <property role="2ripvU" value="0" />
       <property role="TrG5h" value="build" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
   <node concept="KZEPZ" id="3WlLGfGCXxN">
     <property role="TrG5h" value="collection" />
     <node concept="KZEQP" id="3WlLGfGCXxO" role="KZEQR">
-      <ref role="KZEQO" node="2q2uwvmrud7" />
+      <ref role="KZEQO" node="2q2uwvmrud7" resolve="FIG" />
     </node>
     <node concept="KZEQP" id="3WlLGfGCXxQ" role="KZEQR">
-      <ref role="KZEQO" node="3WlLGfGCNVL" />
+      <ref role="KZEQO" node="3WlLGfGCNVL" resolve="build" />
     </node>
   </node>
   <node concept="1a6_xK" id="3xJFGTMtLn6">
@@ -227,16 +227,16 @@
     <node concept="3ZW7eb" id="3xJFGTMtQvX" role="lGtFl">
       <property role="2ripvU" value="0" />
       <property role="TrG5h" value="SomeNodeWithRef" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
   <node concept="1a6_xP" id="3xJFGTMtLn9">
     <property role="TrG5h" value="HasSomeRef" />
-    <ref role="1a6_xM" node="3xJFGTMtLn7" />
+    <ref role="1a6_xM" node="3xJFGTMtLn7" resolve="T2" />
     <node concept="3ZW7eb" id="3xJFGTMtLna" role="lGtFl">
       <property role="2ripvU" value="0" />
       <property role="TrG5h" value="HasSomeRef" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
 </model>

@@ -3,6 +3,7 @@
   <persistence version="9" />
   <attribute name="checkpoint" value="DescriptorClasses" />
   <attribute name="generation-plan" value="AspectCPS" />
+  <attribute name="user-objects" value="true" />
   <languages />
   <imports>
     <import index="tip2" ref="r:01e499c1-003c-46db-8a43-c785a8773179(org.campagnelab.refexample.typesystem)" />

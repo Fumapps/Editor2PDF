@@ -8,6 +8,7 @@
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
+    <import index="90a9" ref="r:fb24ac52-5985-4947-bba9-25be6fd32c1a(de.itemis.mps.extensions.build)" />
   </imports>
   <registry>
     <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
@@ -140,6 +141,12 @@
       <concept id="763829979718664966" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleResources" flags="ng" index="3rtmxn">
         <child id="763829979718664967" name="files" index="3rtmxm" />
       </concept>
+      <concept id="4278635856200817744" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleModelRoot" flags="ng" index="1BupzO">
+        <property id="8137134783396907368" name="convert2binary" index="1Hdu6h" />
+        <property id="8137134783396676838" name="extracted" index="1HemKv" />
+        <property id="2889113830911481881" name="deployFolderName" index="3ZfqAx" />
+        <child id="8137134783396676835" name="location" index="1HemKq" />
+      </concept>
       <concept id="4278635856200826393" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyJar" flags="ng" index="1BurEX">
         <child id="4278635856200826394" name="path" index="1BurEY" />
       </concept>
@@ -169,7 +176,7 @@
       <node concept="aVJcg" id="y5Izch8BaR" role="aVJcv">
         <node concept="NbPM2" id="y5Izch8BaQ" role="aVJcq">
           <node concept="3Mxwew" id="y5Izch8BaP" role="3MwsjC">
-            <property role="3MwjfP" value="1.3" />
+            <property role="3MwjfP" value="1.4" />
           </node>
         </node>
       </node>
@@ -186,6 +193,17 @@
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="2B3cBtBfXtp" role="2JcizS">
         <ref role="398BVh" node="2B3cBtBfXtn" resolve="mps_home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="nAGTCVh4cp" role="1l3spa">
+      <ref role="1l3spb" to="90a9:2Xjt3l56m0V" resolve="de.itemis.mps.extensions" />
+      <node concept="55IIr" id="nAGTCVhsuo" role="2JcizS">
+        <node concept="2Ry0Ak" id="nAGTCVhsuX" role="iGT6I">
+          <property role="2Ry0Am" value="build" />
+          <node concept="2Ry0Ak" id="nAGTCVhsv2" role="2Ry0An">
+            <property role="2Ry0Am" value="dependencies" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="1l3spV" id="2B3cBtBfXtQ" role="1l3spN">
@@ -259,7 +277,7 @@
                   <node concept="2Ry0Ak" id="2B3cBtBji4C" role="2Ry0An">
                     <property role="2Ry0Am" value="com.itext" />
                     <node concept="2Ry0Ak" id="2B3cBtBji4I" role="2Ry0An">
-                      <property role="2Ry0Am" value="itext-xtra-5.5.0.jar" />
+                      <property role="2Ry0Am" value="itext-xtra-5.5.13.3.jar" />
                     </node>
                   </node>
                 </node>
@@ -273,7 +291,7 @@
                   <node concept="2Ry0Ak" id="2B3cBtBji6_" role="2Ry0An">
                     <property role="2Ry0Am" value="com.itext" />
                     <node concept="2Ry0Ak" id="2B3cBtBjiaE" role="2Ry0An">
-                      <property role="2Ry0Am" value="itext-pdfa-5.5.0.jar" />
+                      <property role="2Ry0Am" value="itext-pdfa-5.5.13.3.jar" />
                     </node>
                   </node>
                 </node>
@@ -287,7 +305,7 @@
                   <node concept="2Ry0Ak" id="2B3cBtBji8$" role="2Ry0An">
                     <property role="2Ry0Am" value="com.itext" />
                     <node concept="2Ry0Ak" id="2B3cBtBjich" role="2Ry0An">
-                      <property role="2Ry0Am" value="itextpdf-5.5.0.jar" />
+                      <property role="2Ry0Am" value="itextpdf-5.5.13.3.jar" />
                     </node>
                   </node>
                 </node>
@@ -301,7 +319,7 @@
                   <node concept="2Ry0Ak" id="z8wxFGLttp" role="2Ry0An">
                     <property role="2Ry0Am" value="org.jfreesvg" />
                     <node concept="2Ry0Ak" id="z8wxFGLtvn" role="2Ry0An">
-                      <property role="2Ry0Am" value="jfreesvg-3.0.jar" />
+                      <property role="2Ry0Am" value="jfreesvg-3.4.3.jar" />
                     </node>
                   </node>
                 </node>
@@ -324,13 +342,13 @@
         <node concept="2pNUuL" id="5ayKDoDhh1X" role="2pNNFR">
           <property role="2pNUuO" value="since-build" />
           <node concept="2pMdtt" id="5ayKDoDhh1Y" role="2pMdts">
-            <property role="2pMdty" value="181.1254" />
+            <property role="2pMdty" value="223" />
           </node>
         </node>
         <node concept="2pNUuL" id="5ayKDoDhh1Z" role="2pNNFR">
           <property role="2pNUuO" value="until-build" />
           <node concept="2pMdtt" id="5ayKDoDhh20" role="2pMdts">
-            <property role="2pMdty" value="182.0000" />
+            <property role="2pMdty" value="223.*" />
           </node>
         </node>
       </node>
@@ -349,6 +367,9 @@
       </node>
       <node concept="m$_yC" id="2B3cBtBfXtN" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
+      </node>
+      <node concept="m$_yC" id="2zKR2uqf8$k" role="m$_yJ">
+        <ref role="m$_y1" to="90a9:2OJNL7ElZsF" resolve="de.q60.mps.collections.libs" />
       </node>
       <node concept="3_J27D" id="2B3cBtBfXtO" role="m_cZH">
         <node concept="3Mxwew" id="2B3cBtBfXtP" role="3MwsjC">
@@ -371,7 +392,6 @@
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="org.campagnelab.mps.editor2pdf" />
         <property role="3LESm3" value="93bc01ac-08ca-4f11-9c7d-614d04055dfb" />
-        <property role="2GAjPV" value="false" />
         <node concept="55IIr" id="2B3cBtBfXtw" role="3LF7KH">
           <node concept="2Ry0Ak" id="2B3cBtBfXtx" role="iGT6I">
             <property role="2Ry0Am" value="languages" />
@@ -385,13 +405,11 @@
         </node>
         <node concept="1SiIV0" id="2B3cBtBg1Kj" role="3bR37C">
           <node concept="3bR9La" id="2B3cBtBg1Kk" role="1SiIV1">
-            <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
           </node>
         </node>
         <node concept="1SiIV0" id="2B3cBtBg1Kn" role="3bR37C">
           <node concept="3bR9La" id="2B3cBtBg1Ko" role="1SiIV1">
-            <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:7Kfy9QB6L4X" resolve="jetbrains.mps.lang.editor" />
           </node>
         </node>
@@ -403,7 +421,6 @@
         </node>
         <node concept="1SiIV0" id="2B3cBtBg2WQ" role="3bR37C">
           <node concept="3bR9La" id="2B3cBtBg2WR" role="1SiIV1">
-            <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
@@ -415,13 +432,11 @@
         </node>
         <node concept="1SiIV0" id="3WlLGfGFkRc" role="3bR37C">
           <node concept="3bR9La" id="3WlLGfGFkRd" role="1SiIV1">
-            <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:3MI1gu0QouH" resolve="jetbrains.mps.editor.runtime" />
           </node>
         </node>
         <node concept="1SiIV0" id="1a408csaXud" role="3bR37C">
           <node concept="3bR9La" id="1a408csaXue" role="1SiIV1">
-            <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
           </node>
         </node>
@@ -440,60 +455,44 @@
             </node>
           </node>
         </node>
+        <node concept="1SiIV0" id="nAGTCVgCB2" role="3bR37C">
+          <node concept="3bR9La" id="nAGTCVgCB3" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="nAGTCVgCBc" role="3bR31x">
+          <property role="3ZfqAx" value="languageModels" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="nAGTCVgCBd" role="1HemKq">
+            <node concept="398BVA" id="nAGTCVgCB4" role="3LXTmr">
+              <ref role="398BVh" node="z8wxFGLtjs" resolve="org.campagnelab.editor2pdf.home" />
+              <node concept="2Ry0Ak" id="nAGTCVgCB5" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="nAGTCVgCB6" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.mps.editor2pdf" />
+                  <node concept="2Ry0Ak" id="nAGTCVgCB7" role="2Ry0An">
+                    <property role="2Ry0Am" value="languageModels" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="nAGTCVgCBe" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="nAGTCVh4eu" role="3bR37C">
+          <node concept="3bR9La" id="nAGTCVh4ev" role="1SiIV1">
+            <ref role="3bR37D" to="90a9:6fQhGuklQWU" resolve="de.q60.mps.collections.libs" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="2B3cBtBfXtF" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="com.itext" />
         <property role="3LESm3" value="fae75b6b-e1b0-446e-af11-a56ff9bea2b3" />
         <property role="2GAjPV" value="true" />
-        <node concept="1SiIV0" id="2B3cBtBjigk" role="3bR37C">
-          <node concept="1BurEX" id="2B3cBtBjigl" role="1SiIV1">
-            <node concept="398BVA" id="2B3cBtBjigc" role="1BurEY">
-              <ref role="398BVh" node="z8wxFGLtjs" resolve="org.campagnelab.editor2pdf.home" />
-              <node concept="2Ry0Ak" id="2B3cBtBjigd" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="2B3cBtBjige" role="2Ry0An">
-                  <property role="2Ry0Am" value="com.itext" />
-                  <node concept="2Ry0Ak" id="2B3cBtBjigf" role="2Ry0An">
-                    <property role="2Ry0Am" value="itext-xtra-5.5.0.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="2B3cBtBjigu" role="3bR37C">
-          <node concept="1BurEX" id="2B3cBtBjigv" role="1SiIV1">
-            <node concept="398BVA" id="2B3cBtBjigm" role="1BurEY">
-              <ref role="398BVh" node="z8wxFGLtjs" resolve="org.campagnelab.editor2pdf.home" />
-              <node concept="2Ry0Ak" id="2B3cBtBjign" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="2B3cBtBjigo" role="2Ry0An">
-                  <property role="2Ry0Am" value="com.itext" />
-                  <node concept="2Ry0Ak" id="2B3cBtBjigp" role="2Ry0An">
-                    <property role="2Ry0Am" value="itext-pdfa-5.5.0.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="2B3cBtBjigC" role="3bR37C">
-          <node concept="1BurEX" id="2B3cBtBjigD" role="1SiIV1">
-            <node concept="398BVA" id="2B3cBtBjigw" role="1BurEY">
-              <ref role="398BVh" node="z8wxFGLtjs" resolve="org.campagnelab.editor2pdf.home" />
-              <node concept="2Ry0Ak" id="2B3cBtBjigx" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="2B3cBtBjigy" role="2Ry0An">
-                  <property role="2Ry0Am" value="com.itext" />
-                  <node concept="2Ry0Ak" id="2B3cBtBjigz" role="2Ry0An">
-                    <property role="2Ry0Am" value="itextpdf-5.5.0.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="55IIr" id="2B3cBtBfXtA" role="3LF7KH">
           <node concept="2Ry0Ak" id="2B3cBtBfXtB" role="iGT6I">
             <property role="2Ry0Am" value="solutions" />
@@ -526,12 +525,60 @@
             </node>
           </node>
         </node>
+        <node concept="1SiIV0" id="nAGTCVgCBn" role="3bR37C">
+          <node concept="1BurEX" id="nAGTCVgCBo" role="1SiIV1">
+            <node concept="398BVA" id="nAGTCVgCBf" role="1BurEY">
+              <ref role="398BVh" node="z8wxFGLtjs" resolve="org.campagnelab.editor2pdf.home" />
+              <node concept="2Ry0Ak" id="nAGTCVgCBg" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="nAGTCVgCBh" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.itext" />
+                  <node concept="2Ry0Ak" id="nAGTCVgCBi" role="2Ry0An">
+                    <property role="2Ry0Am" value="itext-pdfa-5.5.13.3.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="nAGTCVgCBx" role="3bR37C">
+          <node concept="1BurEX" id="nAGTCVgCBy" role="1SiIV1">
+            <node concept="398BVA" id="nAGTCVgCBp" role="1BurEY">
+              <ref role="398BVh" node="z8wxFGLtjs" resolve="org.campagnelab.editor2pdf.home" />
+              <node concept="2Ry0Ak" id="nAGTCVgCBq" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="nAGTCVgCBr" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.itext" />
+                  <node concept="2Ry0Ak" id="nAGTCVgCBs" role="2Ry0An">
+                    <property role="2Ry0Am" value="itext-xtra-5.5.13.3.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="nAGTCVgCBF" role="3bR37C">
+          <node concept="1BurEX" id="nAGTCVgCBG" role="1SiIV1">
+            <node concept="398BVA" id="nAGTCVgCBz" role="1BurEY">
+              <ref role="398BVh" node="z8wxFGLtjs" resolve="org.campagnelab.editor2pdf.home" />
+              <node concept="2Ry0Ak" id="nAGTCVgCB$" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="nAGTCVgCB_" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.itext" />
+                  <node concept="2Ry0Ak" id="nAGTCVgCBA" role="2Ry0An">
+                    <property role="2Ry0Am" value="itextpdf-5.5.13.3.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="z8wxFGLx_U" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="org.jfreesvg" />
         <property role="3LESm3" value="1c437d4c-0780-45a3-b844-68119af353cd" />
-        <property role="2GAjPV" value="false" />
+        <property role="2GAjPV" value="true" />
         <node concept="55IIr" id="z8wxFGLx_X" role="3LF7KH">
           <node concept="2Ry0Ak" id="z8wxFGLxBq" role="iGT6I">
             <property role="2Ry0Am" value="solutions" />
@@ -539,22 +586,6 @@
               <property role="2Ry0Am" value="org.jfreesvg" />
               <node concept="2Ry0Ak" id="z8wxFGLxEe" role="2Ry0An">
                 <property role="2Ry0Am" value="org.jfreesvg.msd" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="z8wxFGLxF2" role="3bR37C">
-          <node concept="1BurEX" id="z8wxFGLxF3" role="1SiIV1">
-            <node concept="398BVA" id="z8wxFGLxEU" role="1BurEY">
-              <ref role="398BVh" node="z8wxFGLtjs" resolve="org.campagnelab.editor2pdf.home" />
-              <node concept="2Ry0Ak" id="z8wxFGLxEV" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="z8wxFGLxEW" role="2Ry0An">
-                  <property role="2Ry0Am" value="org.jfreesvg" />
-                  <node concept="2Ry0Ak" id="z8wxFGLxEX" role="2Ry0An">
-                    <property role="2Ry0Am" value="jfreesvg-3.0.jar" />
-                  </node>
-                </node>
               </node>
             </node>
           </node>
@@ -580,10 +611,26 @@
             </node>
           </node>
         </node>
+        <node concept="1SiIV0" id="nAGTCVgCBP" role="3bR37C">
+          <node concept="1BurEX" id="nAGTCVgCBQ" role="1SiIV1">
+            <node concept="398BVA" id="nAGTCVgCBH" role="1BurEY">
+              <ref role="398BVh" node="z8wxFGLtjs" resolve="org.campagnelab.editor2pdf.home" />
+              <node concept="2Ry0Ak" id="nAGTCVgCBI" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="nAGTCVgCBJ" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.jfreesvg" />
+                  <node concept="2Ry0Ak" id="nAGTCVgCBK" role="2Ry0An">
+                    <property role="2Ry0Am" value="jfreesvg-3.4.3.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2_Ic$z" id="$MLxxYnVCu" role="3989C9">
-      <property role="TZNOO" value="1.8" />
+      <property role="TZNOO" value="17" />
       <property role="1ck6Xt" value="true" />
     </node>
   </node>

@@ -1,0 +1,17 @@
+NOTICE
+======
+This software includes third-party components subject to the following licenses:
+
+- Editor2PDF: Copyright (c) CampagneLaboratory. Licensed under the GPLv3.
+
+For more information on the licenses and attribution requirements, please see the LICENSE file included in the root directory of this repository.
+
+This NOTICE file should be included in any distribution of this software, and should not be modified without express permission from [author name].
+
+Relevant Modifications
+======================
+
+- migrate to MPS 2022.3
+- simplify rendering of PDF/SVG by directly calling EditorComponent.paintAll()
+- refactored font mapping and support italic/bold fonts automatically, if files exist
+- recognize JetBrains Mono as the default font, if no font is specified

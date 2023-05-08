@@ -4,7 +4,9 @@ Editor2PDF
 Get Started
 -----------
 
-Run gradle task "copyDeps" first. Then start in MPS 2022.2
+Run gradle task "copyDeps" first. Then start in MPS 2022.3
+
+`gradlew copyDeps`
 
 Overview
 --------

@@ -3,21 +3,21 @@
   <models>
     <modelRoot contentPath="${module}" type="default" />
     <modelRoot contentPath="${module}" type="java_classes">
-      <sourceRoot location="itext-xtra-5.5.0.jar" />
-      <sourceRoot location="itext-pdfa-5.5.0.jar" />
-      <sourceRoot location="itextpdf-5.5.0.jar" />
-      <excluded location="itextpdf-5.5.0-sources.jar" />
-      <excluded location="itext-xtra-5.5.0-sources.jar" />
-      <excluded location="itext-pdfa-5.5.0-sources.jar" />
-      <excluded location="itext-pdfa-5.5.0-javadoc.jar" />
-      <excluded location="itext-xtra-5.5.0-javadoc.jar" />
-      <excluded location="itextpdf-5.5.0-javadoc.jar" />
+      <sourceRoot location="itext-xtra-5.5.13.3.jar" />
+      <sourceRoot location="itext-pdfa-5.5.13.3.jar" />
+      <sourceRoot location="itextpdf-5.5.13.3.jar" />
+      <excluded location="itextpdf-5.5.13.3-sources.jar" />
+      <excluded location="itext-xtra-5.5.13.3-sources.jar" />
+      <excluded location="itext-pdfa-5.5.13.3-sources.jar" />
+      <excluded location="itext-pdfa-5.5.13.3-javadoc.jar" />
+      <excluded location="itext-xtra-5.5.13.3-javadoc.jar" />
+      <excluded location="itextpdf-5.5.13.3-javadoc.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="${module}/itext-pdfa-5.5.0.jar" />
-    <stubModelEntry path="${module}/itext-xtra-5.5.0.jar" />
-    <stubModelEntry path="${module}/itextpdf-5.5.0.jar" />
+    <stubModelEntry path="${module}/itext-pdfa-5.5.13.3.jar" />
+    <stubModelEntry path="${module}/itext-xtra-5.5.13.3.jar" />
+    <stubModelEntry path="${module}/itextpdf-5.5.13.3.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

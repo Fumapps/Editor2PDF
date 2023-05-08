@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jump-pilot.sourceforge.net/repository"
+        allowInsecureProtocol = true
+    }
+}
+
+dependencies {
+    implementation 'com.itextpdf:itextpdf:5.5.13.3'
+    implementation 'com.itextpdf:itext-pdfa:5.5.13.3'
+    implementation 'com.itextpdf:itext-xtra:5.5.13.3'
+    implementation 'com.itextpdf:itextpdf:5.5.13.3:sources'
+    implementation 'com.itextpdf:itext-pdfa:5.5.13.3:sources'
+    implementation 'com.itextpdf:itext-xtra:5.5.13.3:sources'
+    implementation 'com.itextpdf:itextpdf:5.5.13.3:javadoc'
+    implementation 'com.itextpdf:itext-pdfa:5.5.13.3:javadoc'
+    implementation 'com.itextpdf:itext-xtra:5.5.13.3:javadoc'
+}
+
+task copyDeps(type: Copy) {
+    from configurations.compileClasspath
+    into 'solutions/com.itext'
+    include 'itext*.jar'
+}

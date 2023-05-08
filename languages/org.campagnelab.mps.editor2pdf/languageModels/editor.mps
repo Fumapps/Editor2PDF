@@ -182,6 +182,15 @@
       </node>
       <node concept="l2Vlx" id="L_Y2cWAjAO" role="2iSdaV" />
     </node>
+    <node concept="3EZMnI" id="5qJ$Po8XmUR" role="6VMZX">
+      <node concept="l2Vlx" id="5qJ$Po8XmUS" role="2iSdaV" />
+      <node concept="3F0ifn" id="5qJ$Po8XmUV" role="3EZMnx">
+        <property role="3F0ifm" value="useFontAlsoForSwingComponents" />
+      </node>
+      <node concept="3F0A7n" id="5qJ$Po8XmV0" role="3EZMnx">
+        <ref role="1NtTu8" to="3t4d:5qJ$Po8XmUO" resolve="useFontAlsoForSwingComponents" />
+      </node>
+    </node>
   </node>
   <node concept="24kQdi" id="L_Y2cWAPmu">
     <ref role="1XX52x" to="3t4d:L_Y2cWAPls" resolve="PdfCollection" />

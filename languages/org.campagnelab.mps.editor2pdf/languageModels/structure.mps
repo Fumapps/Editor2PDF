@@ -135,6 +135,11 @@
       <property role="IQ2nx" value="893392931327129956" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="5qJ$Po8XmUO" role="1TKVEl">
+      <property role="IQ2nx" value="6246373205912940212" />
+      <property role="TrG5h" value="useFontAlsoForSwingComponents" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="PrWs8" id="L_Y2cWAj_y" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>

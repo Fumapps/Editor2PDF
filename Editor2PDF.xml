@@ -4,7 +4,7 @@
   <property name="build.tmp" location="${build.dir}/tmp/org.campagnelab.Editor2PDF" />
   <property name="build.layout" location="${build.dir}/artifacts/org.campagnelab.Editor2PDF" />
   <property name="mps_home" location="" />
-  <property name="version" value="1.4" />
+  <property name="version" value="1.5" />
   <property name="org.campagnelab.editor2pdf.home" location="${basedir}" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.de.itemis.mps.extensions" location="${basedir}/build/dependencies" />
@@ -31,7 +31,7 @@
   <path id="path.mps.ant.path">
     <pathelement location="${artifacts.mps}/lib/ant/lib/ant-mps.jar" />
     <fileset dir="${artifacts.mps}/lib">
-      <include name="util.jar" />
+      <include name="util-8.jar" />
     </fileset>
   </path>
   
@@ -53,7 +53,7 @@
         <vendor url="https://github.com/CampagneLaboratory/Editor2PDF/">Campagne Laboratory</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>de.q60.mps.collections.libs</depends>
-        <idea-version since-build="223" until-build="223.*" />
+        <idea-version since-build="232" until-build="232.*" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -72,7 +72,7 @@
         <vendor url="https://github.com/CampagneLaboratory/Editor2PDF/">Campagne Laboratory</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>de.q60.mps.collections.libs</depends>
-        <idea-version since-build="223" until-build="223.*" />
+        <idea-version since-build="232" until-build="232.*" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -205,13 +205,19 @@
         <library jar="../../lib/itext-pdfa-5.5.13.3.jar" />
         <library jar="../../lib/itext-xtra-5.5.13.3.jar" />
         <library jar="../../lib/itextpdf-5.5.13.3.jar" />
-        <sources jar="." descriptor="com.itext.msd" />
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="com.itext-src.jar" descriptor="com.itext.msd" />
       </module>
     </echoxml>
     <jar destfile="${build.tmp}/default/Editor2PDF-_dl__lbrace_version_rbrace_.zip/Editor2PDF/languages/Editor2PDF/com.itext.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/com.itext" />
       <fileset dir="${basedir}/solutions/com.itext" includes="icons/**, resources/**" />
-      <zipfileset file="${basedir}/solutions/com.itext/com.itext.msd" prefix="module" />
       <fileset dir="${build.tmp}/default/com.itext.jar" />
+    </jar>
+    <jar destfile="${build.tmp}/default/Editor2PDF-_dl__lbrace_version_rbrace_.zip/Editor2PDF/languages/Editor2PDF/com.itext-src.jar" duplicate="preserve">
+      <zipfileset file="${basedir}/solutions/com.itext/com.itext.msd" prefix="module" />
     </jar>
     <mkdir dir="${build.tmp}/default/org.jfreesvg.jar" />
     <mkdir dir="${build.tmp}/default/org.jfreesvg.jar/META-INF" />
@@ -222,13 +228,19 @@
         </dependencies>
         <uses />
         <library jar="../../lib/jfreesvg-3.4.3.jar" />
-        <sources jar="." descriptor="org.jfreesvg.msd" />
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="org.jfreesvg-src.jar" descriptor="org.jfreesvg.msd" />
       </module>
     </echoxml>
     <jar destfile="${build.tmp}/default/Editor2PDF-_dl__lbrace_version_rbrace_.zip/Editor2PDF/languages/Editor2PDF/org.jfreesvg.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/org.jfreesvg" />
       <fileset dir="${basedir}/solutions/org.jfreesvg" includes="icons/**, resources/**" />
-      <zipfileset file="${basedir}/solutions/org.jfreesvg/org.jfreesvg.msd" prefix="module" />
       <fileset dir="${build.tmp}/default/org.jfreesvg.jar" />
+    </jar>
+    <jar destfile="${build.tmp}/default/Editor2PDF-_dl__lbrace_version_rbrace_.zip/Editor2PDF/languages/Editor2PDF/org.jfreesvg-src.jar" duplicate="preserve">
+      <zipfileset file="${basedir}/solutions/org.jfreesvg/org.jfreesvg.msd" prefix="module" />
     </jar>
     <zip destfile="${build.layout}/Editor2PDF-${version}.zip">
       <zipfileset file="${basedir}/fonts/Anonymous_Pro.ttf" prefix="Editor2PDF/fonts" />
@@ -255,7 +267,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.org.campagnelab.mps.editor2pdf" />
+  <target name="compileJava" depends="java.compile.org.campagnelab.mps.editor2pdf, java.compile.com.itext, java.compile.org.jfreesvg" />
   
   <target name="processResources" />
   
@@ -405,7 +417,7 @@
   
   <target name="makeDependents" />
   
-  <target name="java.compile.org.campagnelab.mps.editor2pdf" depends="fetchDependencies">
+  <target name="java.compile.org.campagnelab.mps.editor2pdf" depends="java.compile.com.itext, java.compile.org.jfreesvg, fetchDependencies">
     <mkdir dir="${org.campagnelab.editor2pdf.home}/languages/org.campagnelab.mps.editor2pdf/source_gen" />
     <mkdir dir="${build.tmp}/java/out/org.campagnelab.mps.editor2pdf" />
     <javac destdir="${build.tmp}/java/out/org.campagnelab.mps.editor2pdf" fork="true" encoding="utf8" includeantruntime="false" source="17" target="17">
@@ -414,11 +426,13 @@
         <path location="${org.campagnelab.editor2pdf.home}/languages/org.campagnelab.mps.editor2pdf/source_gen" />
       </src>
       <classpath>
-        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <pathelement path="${build.tmp}/java/out/com.itext" />
+        <pathelement path="${build.tmp}/java/out/org.jfreesvg" />
         <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
         <fileset file="${artifacts.mps}/lib/mps-context.jar" />
         <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
         <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
         <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
@@ -428,10 +442,8 @@
         <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-references.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
@@ -445,14 +457,18 @@
         <fileset file="${org.campagnelab.editor2pdf.home}/solutions/org.jfreesvg/jfreesvg-3.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/app.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
+        <fileset file="${artifacts.mps}/lib/app-client.jar" />
+        <fileset file="${artifacts.mps}/lib/lib.jar" />
+        <fileset file="${artifacts.mps}/lib/lib-client.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />
         <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/util-8.jar" />
         <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
         <fileset file="${artifacts.mps}/lib/java-impl.jar" />
         <fileset file="${artifacts.mps}/lib/jps-model.jar" />
         <fileset file="${artifacts.mps}/lib/testFramework.jar" />
         <fileset file="${artifacts.mps}/lib/stats.jar" />
+        <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
         <fileset file="${artifacts.de.itemis.mps.extensions}/de.q60.mps.collections.libs/languages/de.q60.mps.collections.libs/de.q60.mps.collections.libs.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -476,6 +492,14 @@
         <fileset dir="${artifacts.de.itemis.mps.extensions}/de.q60.mps.collections.libs/lib" includes="commons-collections4-4.4.jar" />
       </classpath>
     </javac>
+  </target>
+  
+  <target name="java.compile.com.itext">
+    <mkdir dir="${build.tmp}/java/out/com.itext" />
+  </target>
+  
+  <target name="java.compile.org.jfreesvg">
+    <mkdir dir="${build.tmp}/java/out/org.jfreesvg" />
   </target>
   
   <target name="cleanSources">

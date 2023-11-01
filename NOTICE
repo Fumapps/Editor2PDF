@@ -11,7 +11,7 @@ This NOTICE file should be included in any distribution of this software, and sh
 Relevant Modifications
 ======================
 
-- migrate to MPS 2022.3
+- migrate to MPS 2023.2
 - simplify rendering of PDF/SVG by directly calling EditorComponent.paintAll()
 - refactored font mapping and support italic/bold fonts automatically, if files exist
 - recognize JetBrains Mono as the default font, if no font is specified

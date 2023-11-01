@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="com.itext" uuid="fae75b6b-e1b0-446e-af11-a56ff9bea2b3" moduleVersion="0" compileInMPS="true">
+<solution name="com.itext" uuid="fae75b6b-e1b0-446e-af11-a56ff9bea2b3" moduleVersion="0">
   <models>
     <modelRoot contentPath="${module}/itext-pdfa-5.5.13.3.jar!/" type="java_classes">
       <sourceRoot location="." />
@@ -21,7 +21,6 @@
     <stubModelEntry path="${module}/itext-xtra-5.5.13.3.jar" />
     <stubModelEntry path="${module}/itextpdf-5.5.13.3.jar" />
   </stubModelEntries>
-  <sourcePath />
   <dependencies>
     <dependency reexport="true">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
   </dependencies>

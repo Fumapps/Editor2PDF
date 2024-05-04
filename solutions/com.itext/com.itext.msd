@@ -14,13 +14,11 @@
   <facets>
     <facet type="java" compile="mps" classes="mps" ext="no">
       <classes generated="true" path="${module}/classes_gen" />
+      <library location="${module}/itext-pdfa-5.5.13.3.jar" />
+      <library location="${module}/itext-xtra-5.5.13.3.jar" />
+      <library location="${module}/itextpdf-5.5.13.3.jar" />
     </facet>
   </facets>
-  <stubModelEntries>
-    <stubModelEntry path="${module}/itext-pdfa-5.5.13.3.jar" />
-    <stubModelEntry path="${module}/itext-xtra-5.5.13.3.jar" />
-    <stubModelEntry path="${module}/itextpdf-5.5.13.3.jar" />
-  </stubModelEntries>
   <dependencies>
     <dependency reexport="true">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
   </dependencies>

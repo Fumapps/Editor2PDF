@@ -3,7 +3,7 @@
   <persistence version="9" />
   <attribute name="doNotGenerate" value="true" />
   <languages>
-    <use id="93bc01ac-08ca-4f11-9c7d-614d04055dfb" name="org.campagnelab.mps.editor2pdf" version="0" />
+    <use id="93bc01ac-08ca-4f11-9c7d-614d04055dfb" name="org.campagnelab.mps.editor2pdf" version="1" />
     <use id="ed6d7656-532c-4bc2-81d1-af945aeb8280" name="jetbrains.mps.baseLanguage.blTypes" version="0" />
     <use id="4caf0310-491e-41f5-8a9b-2006b3a94898" name="jetbrains.mps.execution.util" version="0" />
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
@@ -88,24 +88,17 @@
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
-    <language id="698a8d22-a104-47a0-ba8d-10e3ec237f13" name="jetbrains.mps.build.workflow">
-      <concept id="2059109515400477499" name="jetbrains.mps.build.workflow.structure.BwfAntTaskDeclaration" flags="ng" index="3fwhoa" />
-    </language>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
       <concept id="5481553824944787378" name="jetbrains.mps.build.structure.BuildSourceProjectRelativePath" flags="ng" index="55IIr" />
-      <concept id="5617550519002745379" name="jetbrains.mps.build.structure.BuildDependency" flags="ng" index="1l3spc" />
       <concept id="5617550519002745364" name="jetbrains.mps.build.structure.BuildLayout" flags="ng" index="1l3spV" />
       <concept id="5617550519002745363" name="jetbrains.mps.build.structure.BuildProject" flags="ng" index="1l3spW">
         <property id="4915877860348071612" name="fileName" index="turDy" />
         <property id="5204048710541015587" name="internalBaseDirectory" index="2DA0ip" />
         <child id="4796668409958418110" name="scriptsDir" index="auvoZ" />
         <child id="3542413272732620719" name="aspects" index="1hWBAP" />
-        <child id="5617550519002745381" name="dependencies" index="1l3spa" />
         <child id="5617550519002745372" name="layout" index="1l3spN" />
       </concept>
-      <concept id="4701820937132281259" name="jetbrains.mps.build.structure.BuildCustomWorkflow" flags="ng" index="1y0Vig">
-        <child id="4701820937132281260" name="parts" index="1y0Vin" />
-      </concept>
+      <concept id="4701820937132281259" name="jetbrains.mps.build.structure.BuildCustomWorkflow" flags="ng" index="1y0Vig" />
     </language>
     <language id="85d7c0cc-4aa8-4799-8fba-b6f80d065fa5" name="org.campagnelab.refexample">
       <concept id="4066661190245676734" name="org.campagnelab.refexample.structure.RefTarget" flags="ng" index="1a6_xK" />
@@ -195,10 +188,7 @@
     <property role="2DA0ip" value="." />
     <property role="TrG5h" value="Testing" />
     <property role="turDy" value="build2.xml" />
-    <node concept="1y0Vig" id="3WlLGfGCNWi" role="1hWBAP">
-      <node concept="3fwhoa" id="3WlLGfGCNWl" role="1y0Vin" />
-    </node>
-    <node concept="1l3spc" id="3WlLGfGCNWe" role="1l3spa" />
+    <node concept="1y0Vig" id="3WlLGfGCNWi" role="1hWBAP" />
     <node concept="55IIr" id="3WlLGfGCNVJ" role="auvoZ" />
     <node concept="1l3spV" id="3WlLGfGCNVK" role="1l3spN" />
     <node concept="3ZW7eb" id="3WlLGfGCNVL" role="lGtFl">
@@ -232,7 +222,7 @@
   </node>
   <node concept="1a6_xP" id="3xJFGTMtLn9">
     <property role="TrG5h" value="HasSomeRef" />
-    <ref role="1a6_xM" node="3xJFGTMtLn7" />
+    <ref role="1a6_xM" node="3xJFGTMtLn7" resolve="T2" />
     <node concept="3ZW7eb" id="3xJFGTMtLna" role="lGtFl">
       <property role="2ripvU" value="0" />
       <property role="TrG5h" value="HasSomeRef" />

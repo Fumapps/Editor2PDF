@@ -4,13 +4,13 @@ Editor2PDF
 Get Started
 -----------
 
-Run gradle task "copyDeps" first. Then start in MPS 2022.3
+Run gradle task "copyDeps" first. Then start in MPS 2023.2
 
 `gradlew copyDeps`
 
 Overview
 --------
-This software makes it possible to attach an annotation to an arbitrary MPS editor cell and render the cell to a PDF file output. The software uses iText to output PDF. You will need MPS 3.1 to compile.
+This software makes it possible to attach an annotation to an arbitrary MPS editor cell and render the cell to a PDF file output. The software uses iText to output PDF. You will need MPS 2023.2 to compile.
 
 Usage
 -----

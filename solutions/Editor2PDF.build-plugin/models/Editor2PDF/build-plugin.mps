@@ -78,7 +78,7 @@
       <concept id="8654221991637384182" name="jetbrains.mps.build.structure.BuildFileIncludesSelector" flags="ng" index="3qWCbU">
         <property id="8654221991637384184" name="pattern" index="3qWCbO" />
       </concept>
-      <concept id="4701820937132344003" name="jetbrains.mps.build.structure.BuildLayout_Container" flags="ng" index="1y1bJS">
+      <concept id="4701820937132344003" name="jetbrains.mps.build.structure.BuildLayout_Container" flags="ngI" index="1y1bJS">
         <child id="7389400916848037006" name="children" index="39821P" />
       </concept>
       <concept id="841011766566059607" name="jetbrains.mps.build.structure.BuildStringNotEmpty" flags="ng" index="3_J27D" />
@@ -94,7 +94,7 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
@@ -176,7 +176,7 @@
       <node concept="aVJcg" id="y5Izch8BaR" role="aVJcv">
         <node concept="NbPM2" id="y5Izch8BaQ" role="aVJcq">
           <node concept="3Mxwew" id="y5Izch8BaP" role="3MwsjC">
-            <property role="3MwjfP" value="1.4" />
+            <property role="3MwjfP" value="1.5" />
           </node>
         </node>
       </node>
@@ -342,13 +342,13 @@
         <node concept="2pNUuL" id="5ayKDoDhh1X" role="2pNNFR">
           <property role="2pNUuO" value="since-build" />
           <node concept="2pMdtt" id="5ayKDoDhh1Y" role="2pMdts">
-            <property role="2pMdty" value="223" />
+            <property role="2pMdty" value="232" />
           </node>
         </node>
         <node concept="2pNUuL" id="5ayKDoDhh1Z" role="2pNNFR">
           <property role="2pNUuO" value="until-build" />
           <node concept="2pMdtt" id="5ayKDoDhh20" role="2pMdts">
-            <property role="2pMdty" value="223.*" />
+            <property role="2pMdty" value="232.*" />
           </node>
         </node>
       </node>

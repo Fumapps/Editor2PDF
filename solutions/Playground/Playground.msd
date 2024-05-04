@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="Playground" uuid="766a7fab-c925-4c96-b3e5-1f6a8e96f6d5" moduleVersion="0" compileInMPS="true">
+<solution name="Playground" uuid="766a7fab-c925-4c96-b3e5-1f6a8e96f6d5" moduleVersion="0">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -10,7 +10,6 @@
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
   </facets>
-  <sourcePath />
   <dependencies>
     <dependency reexport="false">6106f611-7a74-42d1-80de-edc5c602bfd1(jetbrains.mps.lang.editor.diagram)</dependency>
     <dependency reexport="false">5a283d13-799d-4cf6-a6a7-5c3e11d79dcb(jetbrains.mps.lang.editor.diagram.runtime)</dependency>
@@ -26,7 +25,7 @@
     <language slang="l:4caf0310-491e-41f5-8a9b-2006b3a94898:jetbrains.mps.execution.util" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
     <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
-    <language slang="l:93bc01ac-08ca-4f11-9c7d-614d04055dfb:org.campagnelab.mps.editor2pdf" version="0" />
+    <language slang="l:93bc01ac-08ca-4f11-9c7d-614d04055dfb:org.campagnelab.mps.editor2pdf" version="1" />
     <language slang="l:85d7c0cc-4aa8-4799-8fba-b6f80d065fa5:org.campagnelab.refexample" version="0" />
   </languageVersions>
   <dependencyVersions>

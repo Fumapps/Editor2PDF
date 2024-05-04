@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="org.jfreesvg" uuid="1c437d4c-0780-45a3-b844-68119af353cd" moduleVersion="0" compileInMPS="true">
+<solution name="org.jfreesvg" uuid="1c437d4c-0780-45a3-b844-68119af353cd" moduleVersion="0">
   <models>
     <modelRoot contentPath="${module}" type="java_classes">
       <sourceRoot location="jfreesvg-3.4.3.jar" />
@@ -8,12 +8,9 @@
   <facets>
     <facet type="java" compile="mps" classes="mps" ext="no">
       <classes generated="true" path="${module}/classes_gen" />
+      <library location="${module}/jfreesvg-3.4.3.jar" />
     </facet>
   </facets>
-  <stubModelEntries>
-    <stubModelEntry path="${module}/jfreesvg-3.4.3.jar" />
-  </stubModelEntries>
-  <sourcePath />
   <dependencies>
     <dependency reexport="true">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
   </dependencies>

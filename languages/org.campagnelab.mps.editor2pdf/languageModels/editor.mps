@@ -54,6 +54,9 @@
       </concept>
       <concept id="1186414860679" name="jetbrains.mps.lang.editor.structure.EditableStyleClassItem" flags="ln" index="VPxyj" />
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
+      <concept id="1186415722038" name="jetbrains.mps.lang.editor.structure.FontSizeStyleClassItem" flags="ln" index="VSNWy">
+        <property id="1221209241505" name="value" index="1lJzqX" />
+      </concept>
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
@@ -234,6 +237,11 @@
           <property role="Vb096" value="fLwANPp/orange" />
         </node>
       </node>
+      <node concept="3F0ifn" id="4DE6Zndzm6o" role="3EZMnx">
+        <node concept="VSNWy" id="4DE6Zndzm6M" role="3F10Kt">
+          <property role="1lJzqX" value="5" />
+        </node>
+      </node>
       <node concept="3EZMnI" id="7_Pg6u6zXCN" role="3EZMnx">
         <property role="1ayjP4" value="true" />
         <node concept="VPM3Z" id="7_Pg6u6zXCP" role="3F10Kt">
@@ -244,6 +252,9 @@
         </node>
         <node concept="2SsqMj" id="7_Pg6u6zXD3" role="3EZMnx" />
         <node concept="2iRkQZ" id="7_Pg6u6zXCS" role="2iSdaV" />
+        <node concept="pVoyu" id="4DE6Zndzm6I" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="l2Vlx" id="7_Pg6u6yJrj" role="2iSdaV" />
     </node>

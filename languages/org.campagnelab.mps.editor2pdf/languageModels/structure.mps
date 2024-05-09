@@ -246,6 +246,11 @@
       <property role="20kJfa" value="reference" />
       <ref role="20lvS9" to="tpck:gw2VY9q" resolve="BaseConcept" />
     </node>
+    <node concept="1TJgyj" id="4DE6ZndsbwP" role="1TKVEi">
+      <property role="IQ2ns" value="5362129048865650741" />
+      <property role="20kJfa" value="editorHint" />
+      <ref role="20lvS9" to="tpc2:59ZEGVP3g_u" resolve="ConceptEditorHintDeclaration" />
+    </node>
   </node>
 </model>
 

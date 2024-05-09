@@ -75,6 +75,7 @@
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
         <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
@@ -220,6 +221,30 @@
       <property role="TrG5h" value="PDF" />
       <property role="3tVfz5" value="5378718574870043630" />
       <ref role="2wpffI" node="4E_30JhV9JI" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4DE6ZndgeGu">
+    <property role="EcuMT" value="5362129048862518046" />
+    <property role="TrG5h" value="RenderingHelper" />
+    <property role="34LRSv" value="rendering helper" />
+    <property role="19KtqR" value="true" />
+    <property role="R4oN_" value="Helper to reference a node and decouple Editor2PDF dependency" />
+    <property role="3GE5qa" value="helper" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="4DE6ZndhO9Z" role="1TKVEl">
+      <property role="IQ2nx" value="5362129048862933631" />
+      <property role="TrG5h" value="renderingHint" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="4DE6Zndh8Ga" role="1TKVEi">
+      <property role="IQ2ns" value="5362129048862755594" />
+      <property role="20kJfa" value="rootNode" />
+      <ref role="20lvS9" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    </node>
+    <node concept="1TJgyj" id="4DE6ZndgeKm" role="1TKVEi">
+      <property role="IQ2ns" value="5362129048862518294" />
+      <property role="20kJfa" value="reference" />
+      <ref role="20lvS9" to="tpck:gw2VY9q" resolve="BaseConcept" />
     </node>
   </node>
 </model>

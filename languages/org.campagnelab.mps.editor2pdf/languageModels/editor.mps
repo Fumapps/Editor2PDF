@@ -369,6 +369,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="L_Y2cWAPmu">
+    <property role="3GE5qa" value="helper" />
     <ref role="1XX52x" to="3t4d:L_Y2cWAPls" resolve="PdfCollection" />
     <node concept="3EZMnI" id="L_Y2cWAPnK" role="2wV5jI">
       <node concept="3F0ifn" id="L_Y2cWASkd" role="3EZMnx">
@@ -683,6 +684,53 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1YqEvCGuLiq">
+    <property role="3GE5qa" value="helper" />
+    <ref role="1XX52x" to="3t4d:1YqEvCGuL1Z" resolve="RenderingForModelCreator" />
+    <node concept="3EZMnI" id="1YqEvCGuLis" role="2wV5jI">
+      <node concept="3F0ifn" id="1YqEvCGuLiA" role="3EZMnx">
+        <property role="3F0ifm" value="name:" />
+      </node>
+      <node concept="3F0A7n" id="1YqEvCGuLiI" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="1YqEvCGuLiQ" role="3EZMnx">
+        <property role="3F0ifm" value="model:" />
+        <node concept="pVoyu" id="1YqEvCGuLjf" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="1YqEvCGxsoy" role="3EZMnx">
+        <ref role="1NtTu8" to="3t4d:1YqEvCGxso5" resolve="modelPtr" />
+      </node>
+      <node concept="3F0ifn" id="1YqEvCGuLjq" role="3EZMnx">
+        <property role="3F0ifm" value="output:" />
+        <node concept="pVoyu" id="1YqEvCGuLk2" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="1iCGBv" id="1YqEvCGuLjI" role="3EZMnx">
+        <ref role="1NtTu8" to="3t4d:1YqEvCGuL5T" resolve="diagramOutputDirectory" />
+        <node concept="1sVBvm" id="1YqEvCGuLjK" role="1sWHZn">
+          <node concept="3F0A7n" id="1YqEvCGuLjZ" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1YqEvCGuPxJ" role="3EZMnx">
+        <property role="3F0ifm" value="virtual package:" />
+        <node concept="pVoyu" id="1YqEvCGuPxY" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="1YqEvCGuPyg" role="3EZMnx">
+        <property role="1$x2rV" value="provide a package" />
+        <ref role="1NtTu8" to="tpck:hnGE5uv" resolve="virtualPackage" />
+      </node>
+      <node concept="l2Vlx" id="1YqEvCGuLiz" role="2iSdaV" />
     </node>
   </node>
 </model>

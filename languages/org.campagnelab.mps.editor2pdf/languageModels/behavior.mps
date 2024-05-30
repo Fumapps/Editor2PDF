@@ -463,30 +463,6 @@
       <node concept="3Tm1VV" id="7OORWOlZu79" role="1B3o_S" />
       <node concept="3cqZAl" id="7OORWOlZu7a" role="3clF45" />
       <node concept="3clFbS" id="7OORWOlZu7b" role="3clF47">
-        <node concept="3cpWs8" id="Hy99RCYj$5" role="3cqZAp">
-          <node concept="3cpWsn" id="Hy99RCYj$8" role="3cpWs9">
-            <property role="TrG5h" value="editorComponent" />
-            <node concept="3uibUv" id="Hy99RCYj$a" role="1tU5fm">
-              <ref role="3uigEE" to="exr9:~EditorComponent" resolve="EditorComponent" />
-            </node>
-            <node concept="1eOMI4" id="Hy99RCYEDt" role="33vP2m">
-              <node concept="10QFUN" id="Hy99RCYEDq" role="1eOMHV">
-                <node concept="3uibUv" id="Hy99RCYEDv" role="10QFUM">
-                  <ref role="3uigEE" to="exr9:~EditorComponent" resolve="EditorComponent" />
-                </node>
-                <node concept="2OqwBi" id="Hy99RCYGEa" role="10QFUP">
-                  <node concept="37vLTw" id="Hy99RCYFWc" role="2Oq$k0">
-                    <ref role="3cqZAo" node="Hy99RCYxy3" resolve="editorCell" />
-                  </node>
-                  <node concept="liA8E" id="Hy99RCYI0v" role="2OqNvi">
-                    <ref role="37wK5l" to="f4zo:~EditorCell.getEditorComponent()" resolve="getEditorComponent" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbH" id="7OORWOlZu7e" role="3cqZAp" />
         <node concept="3cpWs8" id="7OORWOlZu7n" role="3cqZAp">
           <node concept="3cpWsn" id="7OORWOlZu7o" role="3cpWs9">
             <property role="TrG5h" value="dir" />
@@ -879,13 +855,20 @@
               </node>
             </node>
             <node concept="3clFbF" id="Hy99RCXj67" role="3cqZAp">
-              <node concept="2OqwBi" id="Hy99RCXkpo" role="3clFbG">
-                <node concept="37vLTw" id="Hy99RCXj65" role="2Oq$k0">
-                  <ref role="3cqZAo" node="Hy99RCYj$8" resolve="editorComponent" />
+              <node concept="2OqwBi" id="5uMSyOuSsvp" role="3clFbG">
+                <node concept="1eOMI4" id="5uMSyOuSTHW" role="2Oq$k0">
+                  <node concept="10QFUN" id="5uMSyOuSTHT" role="1eOMHV">
+                    <node concept="3uibUv" id="5uMSyOuSUcr" role="10QFUM">
+                      <ref role="3uigEE" to="g51k:~EditorCell" resolve="EditorCell" />
+                    </node>
+                    <node concept="37vLTw" id="5uMSyOuSTHY" role="10QFUP">
+                      <ref role="3cqZAo" node="Hy99RCYxy3" resolve="editorCell" />
+                    </node>
+                  </node>
                 </node>
-                <node concept="liA8E" id="Hy99RCXmt3" role="2OqNvi">
-                  <ref role="37wK5l" to="z60i:~Component.paintAll(java.awt.Graphics)" resolve="paintAll" />
-                  <node concept="37vLTw" id="Hy99RCXmZG" role="37wK5m">
+                <node concept="liA8E" id="5uMSyOuStnl" role="2OqNvi">
+                  <ref role="37wK5l" to="g51k:~EditorCell.paint(java.awt.Graphics)" resolve="paint" />
+                  <node concept="37vLTw" id="5uMSyOuSvuP" role="37wK5m">
                     <ref role="3cqZAo" node="7OORWOlZu98" resolve="g2D" />
                   </node>
                 </node>
@@ -1046,30 +1029,6 @@
         </node>
         <node concept="3J1_TO" id="46q0f$BiLCt" role="3cqZAp">
           <node concept="3clFbS" id="46q0f$BiLCu" role="1zxBo7">
-            <node concept="3cpWs8" id="324BXkoCTj3" role="3cqZAp">
-              <node concept="3cpWsn" id="324BXkoCTj4" role="3cpWs9">
-                <property role="TrG5h" value="editorComponent" />
-                <node concept="3uibUv" id="324BXkoCTj5" role="1tU5fm">
-                  <ref role="3uigEE" to="exr9:~EditorComponent" resolve="EditorComponent" />
-                </node>
-                <node concept="1eOMI4" id="324BXkoCTj6" role="33vP2m">
-                  <node concept="10QFUN" id="324BXkoCTj7" role="1eOMHV">
-                    <node concept="3uibUv" id="324BXkoCTj8" role="10QFUM">
-                      <ref role="3uigEE" to="exr9:~EditorComponent" resolve="EditorComponent" />
-                    </node>
-                    <node concept="2OqwBi" id="324BXkoCTj9" role="10QFUP">
-                      <node concept="37vLTw" id="324BXkoCTja" role="2Oq$k0">
-                        <ref role="3cqZAo" node="46q0f$BiLC1" resolve="editorCell" />
-                      </node>
-                      <node concept="liA8E" id="324BXkoCTjb" role="2OqNvi">
-                        <ref role="37wK5l" to="f4zo:~EditorCell.getEditorComponent()" resolve="getEditorComponent" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbH" id="324BXkoCTh6" role="3cqZAp" />
             <node concept="3cpWs8" id="46q0f$BiLCv" role="3cqZAp">
               <node concept="3cpWsn" id="46q0f$BiLCw" role="3cpWs9">
                 <property role="TrG5h" value="svgFile" />
@@ -1293,14 +1252,21 @@
                 <property role="Xl_RC" value="About to render the node" />
               </node>
             </node>
-            <node concept="3clFbF" id="324BXkoCV67" role="3cqZAp">
-              <node concept="2OqwBi" id="324BXkoCWmh" role="3clFbG">
-                <node concept="37vLTw" id="324BXkoCV65" role="2Oq$k0">
-                  <ref role="3cqZAo" node="324BXkoCTj4" resolve="editorComponent" />
+            <node concept="3clFbF" id="5uMSyOuTsfY" role="3cqZAp">
+              <node concept="2OqwBi" id="5uMSyOuTsfZ" role="3clFbG">
+                <node concept="1eOMI4" id="5uMSyOuTsg0" role="2Oq$k0">
+                  <node concept="10QFUN" id="5uMSyOuTsg1" role="1eOMHV">
+                    <node concept="3uibUv" id="5uMSyOuTsg2" role="10QFUM">
+                      <ref role="3uigEE" to="g51k:~EditorCell" resolve="EditorCell" />
+                    </node>
+                    <node concept="37vLTw" id="5uMSyOuTsg3" role="10QFUP">
+                      <ref role="3cqZAo" node="46q0f$BiLC1" resolve="editorCell" />
+                    </node>
+                  </node>
                 </node>
-                <node concept="liA8E" id="324BXkoCXZF" role="2OqNvi">
-                  <ref role="37wK5l" to="z60i:~Component.paintAll(java.awt.Graphics)" resolve="paintAll" />
-                  <node concept="37vLTw" id="324BXkoCYOD" role="37wK5m">
+                <node concept="liA8E" id="5uMSyOuTsg4" role="2OqNvi">
+                  <ref role="37wK5l" to="g51k:~EditorCell.paint(java.awt.Graphics)" resolve="paint" />
+                  <node concept="37vLTw" id="5uMSyOuTsg5" role="37wK5m">
                     <ref role="3cqZAo" node="46q0f$BiP93" resolve="g2d" />
                   </node>
                 </node>

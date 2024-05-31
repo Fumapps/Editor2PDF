@@ -318,7 +318,7 @@
     <property role="EcuMT" value="2277319453542387839" />
     <property role="3GE5qa" value="helper" />
     <property role="TrG5h" value="RenderingForModelCreator" />
-    <property role="34LRSv" value="creator helper" />
+    <property role="34LRSv" value="collection generator" />
     <property role="R4oN_" value="Creates RenderingHelper nodes with a collection for a whole model" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />

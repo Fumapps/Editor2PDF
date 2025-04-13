@@ -278,7 +278,7 @@
     <property role="19KtqR" value="true" />
     <property role="R4oN_" value="Helper to reference a node and decouple Editor2PDF dependency" />
     <property role="3GE5qa" value="helper" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4DE6ZndhO9Z" role="1TKVEl">
       <property role="IQ2nx" value="5362129048862933631" />
       <property role="TrG5h" value="renderingHint" />
@@ -321,7 +321,7 @@
     <property role="34LRSv" value="collection generator" />
     <property role="R4oN_" value="Creates RenderingHelper nodes with a collection for a whole model" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1YqEvCGuL5T" role="1TKVEi">
       <property role="IQ2ns" value="2277319453542388089" />
       <property role="20kJfa" value="diagramOutputDirectory" />

@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml" version="-1" />
-    <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="7" />
+    <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="8" />
     <use id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build" version="-1" />
   </languages>
   <imports>
@@ -130,7 +130,7 @@
       </concept>
       <concept id="868032131020265945" name="jetbrains.mps.build.mps.structure.BuildMPSPlugin" flags="ng" index="3b7kt6" />
       <concept id="5253498789149381388" name="jetbrains.mps.build.mps.structure.BuildMps_Module" flags="ng" index="3bQrTs">
-        <property id="1500819558096356884" name="doNotCompile" index="2GAjPV" />
+        <property id="2928402740576877067" name="javaCode" index="3vZFNd" />
         <child id="5253498789149547825" name="sources" index="3bR31x" />
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
@@ -342,13 +342,13 @@
         <node concept="2pNUuL" id="5ayKDoDhh1X" role="2pNNFR">
           <property role="2pNUuO" value="since-build" />
           <node concept="2pMdtt" id="5ayKDoDhh1Y" role="2pMdts">
-            <property role="2pMdty" value="232" />
+            <property role="2pMdty" value="241" />
           </node>
         </node>
         <node concept="2pNUuL" id="5ayKDoDhh1Z" role="2pNNFR">
           <property role="2pNUuO" value="until-build" />
           <node concept="2pMdtt" id="5ayKDoDhh20" role="2pMdts">
-            <property role="2pMdty" value="232.*" />
+            <property role="2pMdty" value="241.*" />
           </node>
         </node>
       </node>
@@ -492,7 +492,7 @@
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="com.itext" />
         <property role="3LESm3" value="fae75b6b-e1b0-446e-af11-a56ff9bea2b3" />
-        <property role="2GAjPV" value="true" />
+        <property role="3vZFNd" value="3kCd1ud3JDD/compile_ext" />
         <node concept="55IIr" id="2B3cBtBfXtA" role="3LF7KH">
           <node concept="2Ry0Ak" id="2B3cBtBfXtB" role="iGT6I">
             <property role="2Ry0Am" value="solutions" />
@@ -578,7 +578,7 @@
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="org.jfreesvg" />
         <property role="3LESm3" value="1c437d4c-0780-45a3-b844-68119af353cd" />
-        <property role="2GAjPV" value="true" />
+        <property role="3vZFNd" value="3kCd1ud3JDD/compile_ext" />
         <node concept="55IIr" id="z8wxFGLx_X" role="3LF7KH">
           <node concept="2Ry0Ak" id="z8wxFGLxBq" role="iGT6I">
             <property role="2Ry0Am" value="solutions" />

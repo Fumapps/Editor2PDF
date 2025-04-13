@@ -1697,7 +1697,7 @@
             </node>
             <node concept="3BYIHo" id="1YqEvCGvfE8" role="2OqNvi">
               <node concept="37vLTw" id="1YqEvCGvCGO" role="3BYIHq">
-                <ref role="3cqZAo" node="1YqEvCGvCGK" resolve="node" />
+                <ref role="3cqZAo" node="1YqEvCGvCGK" resolve="collection" />
               </node>
             </node>
           </node>

@@ -459,7 +459,7 @@
         </node>
       </node>
       <node concept="1iCGBv" id="4DE6Zndw$2_" role="3EZMnx">
-        <ref role="1NtTu8" to="3t4d:4DE6ZndsbwP" />
+        <ref role="1NtTu8" to="3t4d:4DE6ZndsbwP" resolve="editorHint" />
         <node concept="1sVBvm" id="4DE6Zndw$2A" role="1sWHZn">
           <node concept="3F0A7n" id="4DE6Zndw$2B" role="2wV5jI">
             <property role="1Intyy" value="true" />

@@ -4,9 +4,17 @@ Editor2PDF
 Get Started
 -----------
 
-Run gradle task "copyDeps" first. Then start in MPS 2023.2
+Run gradle task "copyDeps" first. Then start in MPS 2024.1
 
 `gradlew copyDeps`
+
+
+Dependencies
+------------
+
+In MPS, install plugins
+* `MPS Collections Libraries (Stubs)`
+* `MPS Extensions Build Solution`
 
 Overview
 --------

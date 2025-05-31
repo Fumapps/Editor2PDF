@@ -57,7 +57,7 @@
         <depends>com.intellij.modules.platform</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>de.q60.mps.collections.libs</depends>
-        <idea-version since-build="243" until-build="243.*" />
+        <idea-version since-build="251" until-build="259.*" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -362,7 +362,6 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
-        <fileset file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset dir="${artifacts.de.itemis.mps.extensions}/de.q60.mps.collections.libs/lib" includes="commons-collections4.jar" />
         <fileset dir="${artifacts.de.itemis.mps.extensions}/de.q60.mps.collections.libs/lib" includes="guava.jar" />

@@ -130,9 +130,8 @@
     </node>
     <node concept="3Tm1VV" id="7_Pg6u6xWfE" role="1B3o_S" />
     <node concept="3ZW7eb" id="2q2uwvmrud7" role="lGtFl">
-      <property role="2ripvU" value="1" />
       <property role="TrG5h" value="FIG" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
   <node concept="KZc4b" id="4E_30JhWk7G">
@@ -170,18 +169,17 @@
     </node>
     <node concept="3Tm1VV" id="3gGkzkuBEVw" role="1B3o_S" />
     <node concept="3ZW7eb" id="3gGkzkuBF2n" role="lGtFl">
-      <property role="2ripvU" value="1" />
       <property role="TrG5h" value="Another" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
   <node concept="KZEPZ" id="3gGkzkuBEQa">
     <property role="TrG5h" value="MyFigures" />
     <node concept="KZEQP" id="3gGkzkuBEVg" role="KZEQR">
-      <ref role="KZEQO" node="2q2uwvmrud7" />
+      <ref role="KZEQO" node="2q2uwvmrud7" resolve="FIG" />
     </node>
     <node concept="KZEQP" id="3gGkzkuBEVi" role="KZEQR">
-      <ref role="KZEQO" node="3gGkzkuBF2n" />
+      <ref role="KZEQO" node="3gGkzkuBF2n" resolve="Another" />
     </node>
   </node>
   <node concept="1l3spW" id="3WlLGfGCNVI">
@@ -192,18 +190,18 @@
     <node concept="55IIr" id="3WlLGfGCNVJ" role="auvoZ" />
     <node concept="1l3spV" id="3WlLGfGCNVK" role="1l3spN" />
     <node concept="3ZW7eb" id="3WlLGfGCNVL" role="lGtFl">
-      <property role="2ripvU" value="0" />
+      <property role="2ripvU" value="4E_30JhV9Jt/SVG" />
       <property role="TrG5h" value="build" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
   <node concept="KZEPZ" id="3WlLGfGCXxN">
     <property role="TrG5h" value="collection" />
     <node concept="KZEQP" id="3WlLGfGCXxO" role="KZEQR">
-      <ref role="KZEQO" node="2q2uwvmrud7" />
+      <ref role="KZEQO" node="2q2uwvmrud7" resolve="FIG" />
     </node>
     <node concept="KZEQP" id="3WlLGfGCXxQ" role="KZEQR">
-      <ref role="KZEQO" node="3WlLGfGCNVL" />
+      <ref role="KZEQO" node="3WlLGfGCNVL" resolve="build" />
     </node>
   </node>
   <node concept="1a6_xK" id="3xJFGTMtLn6">
@@ -215,18 +213,18 @@
   <node concept="1a6_A6" id="3xJFGTMtLn8">
     <property role="TrG5h" value="SomeNode" />
     <node concept="3ZW7eb" id="3xJFGTMtQvX" role="lGtFl">
-      <property role="2ripvU" value="0" />
+      <property role="2ripvU" value="4E_30JhV9Jt/SVG" />
       <property role="TrG5h" value="SomeNodeWithRef" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
   <node concept="1a6_xP" id="3xJFGTMtLn9">
     <property role="TrG5h" value="HasSomeRef" />
     <ref role="1a6_xM" node="3xJFGTMtLn7" resolve="T2" />
     <node concept="3ZW7eb" id="3xJFGTMtLna" role="lGtFl">
-      <property role="2ripvU" value="0" />
+      <property role="2ripvU" value="4E_30JhV9Jt/SVG" />
       <property role="TrG5h" value="HasSomeRef" />
-      <ref role="KZaLW" node="4E_30JhWk7G" />
+      <ref role="KZaLW" node="4E_30JhWk7G" resolve="FIGURES" />
     </node>
   </node>
 </model>

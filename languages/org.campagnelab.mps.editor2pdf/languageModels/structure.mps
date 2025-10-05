@@ -112,13 +112,11 @@
       <ref role="AX2Wp" node="1$0urrTKPyG" resolve="RenderingOutputFormat" />
     </node>
     <node concept="1TJgyj" id="7_Pg6u6z_YY" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="editor" />
       <property role="IQ2ns" value="8751972264247713726" />
       <ref role="20lvS9" to="tpc2:gXXWOiD" resolve="AbstractComponent" />
     </node>
     <node concept="1TJgyj" id="L_Y2cWAlhv" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="outputTo" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <property role="IQ2ns" value="893392931327136863" />
@@ -145,7 +143,7 @@
     <property role="EcuMT" value="893392931327129896" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2GSP0Mv9R8A" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="font" />
       <property role="IQ2ns" value="3114472293001556518" />
       <ref role="20lvS9" node="2GSP0Mv9R8y" resolve="Font" />
@@ -192,7 +190,7 @@
     <property role="3GE5qa" value="helper" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="L_Y2cWAPmk" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="diagrams" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <property role="IQ2ns" value="893392931327268244" />
@@ -221,7 +219,6 @@
     <property role="EcuMT" value="893392931327268246" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="L_Y2cWAPmn" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="diagram" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <property role="IQ2ns" value="893392931327268247" />

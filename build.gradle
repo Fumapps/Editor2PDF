@@ -2,12 +2,21 @@ plugins {
     id 'java'
 }
 
+ext.languageName = "Editor2PDF"
+ext.mpsVersion = "2026.1"
+ext.antBuildFile = "Editor2PDF.xml"
+
+ext.mpsPlugins = [ ]
+ext.customMpsPlugins = [
+        "de.itemis.mps.extensions": "https://artifacts.itemis.cloud/repository/maven-mps/de/itemis/mps/extensions/2026.1.3712.45fabf4/extensions-2026.1.3712.45fabf4.zip"
+]
+
+configurations.all {
+    transitive = false
+}
+
 repositories {
     mavenCentral()
-    maven {
-        url "https://jump-pilot.sourceforge.net/repository"
-        allowInsecureProtocol = true
-    }
 }
 
 dependencies {
@@ -37,3 +46,37 @@ task copyDeps {
         }
     }
 }
+
+apply from: 'gradle/init-gradle-scripts.gradle'
+
+task prepareMps {
+    group 'mps'
+    dependsOn 'buildOsSpecificBundle'
+}
+
+task mpsBuild {
+    group 'mps'
+    dependsOn 'mpsAntGenerate', 'mpsAntBuild'
+}
+
+task mpsClean {
+    group 'mps'
+    dependsOn 'mpsAntClean', 'mpsAntCleanSources'
+}
+
+task mpsTest {
+    group 'mps'
+    dependsOn 'mpsAntCheck', 'parseTestReportAfterAntCheck'
+}
+
+task openProjectInMps {
+    group 'mps'
+    dependsOn 'mpsOpenProjectInMpsForCurrentOs'
+}
+
+task buildAndOpenProjectInMps {
+    group 'mps'
+    dependsOn mpsBuild, openProjectInMps
+}
+
+mpsAntGenerate.dependsOn copyDeps

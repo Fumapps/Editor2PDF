@@ -55,7 +55,7 @@
         <depends>com.intellij.modules.mps</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>de.q60.mps.collections.libs</depends>
-        <idea-version since-build="251" until-build="259.*" />
+        <idea-version since-build="261" until-build="261.*" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -328,26 +328,7 @@
         <fileset file="${org.campagnelab.editor2pdf.home}/solutions/com.itext/itextpdf-5.5.13.3.jar" />
         <fileset file="${org.campagnelab.editor2pdf.home}/solutions/org.jfreesvg/jfreesvg-3.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/app.jar" />
-        <fileset file="${artifacts.mps}/lib/app-client.jar" />
-        <fileset file="${artifacts.mps}/lib/lib.jar" />
-        <fileset file="${artifacts.mps}/lib/lib-client.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
-        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
-        <fileset file="${artifacts.mps}/lib/util-8.jar" />
-        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
-        <fileset file="${artifacts.mps}/lib/java-frontback.jar" />
-        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
-        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
-        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
-        <fileset file="${artifacts.mps}/lib/stats.jar" />
-        <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.mps}/lib/module-intellij.libraries.asm.jar" />
-        <fileset file="${artifacts.mps}/lib/module-intellij.libraries.gson.jar" />
-        <fileset file="${artifacts.mps}/lib/module-intellij.libraries.miglayout.swing.jar" />
-        <fileset file="${artifacts.mps}/lib/module-intellij.platform.vcs.jar" />
-        <fileset file="${artifacts.mps}/lib/module-intellij.platform.vcs.core.jar" />
-        <fileset file="${artifacts.mps}/lib/module-intellij.xml.parser.jar" />
+        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />

@@ -220,7 +220,7 @@
   </node>
   <node concept="1a6_xP" id="3xJFGTMtLn9">
     <property role="TrG5h" value="HasSomeRef" />
-    <ref role="1a6_xM" node="3xJFGTMtLn7" resolve="T2" />
+    <ref role="1a6_xM" node="3xJFGTMtLn7" />
     <node concept="3ZW7eb" id="3xJFGTMtLna" role="lGtFl">
       <property role="2ripvU" value="4E_30JhV9Jt/SVG" />
       <property role="TrG5h" value="HasSomeRef" />
